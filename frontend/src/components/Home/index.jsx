@@ -1,12 +1,12 @@
-import StyledHome from "./style";
-import MenuBoard from "../MenuBoard";
+import StyledHome from './style'
+import MenuBoard from '../MenuBoard'
 
 function Home() {
   return (
     <StyledHome>
       <MenuBoard></MenuBoard>
     </StyledHome>
-  );
+  )
 }
 
-export default Home;
+export default Home

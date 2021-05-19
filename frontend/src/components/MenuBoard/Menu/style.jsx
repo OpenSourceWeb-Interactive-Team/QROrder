@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Menu = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ const Menu = styled.div`
   border-bottom: 1px solid #eee8e8;
 
   .image {
-    background-image: url("http://d20aeo683mqd6t.cloudfront.net/ko/articles/title_images/000/039/143/medium/IMG_5649%E3%81%AE%E3%82%B3%E3%83%92%E3%82%9A%E3%83%BC.jpg?2019");
+    background-image: url('http://d20aeo683mqd6t.cloudfront.net/ko/articles/title_images/000/039/143/medium/IMG_5649%E3%81%AE%E3%82%B3%E3%83%92%E3%82%9A%E3%83%BC.jpg?2019');
     background-size: cover;
     height: 5rem;
     width: 5rem;
@@ -83,6 +83,6 @@ const Menu = styled.div`
     padding: 0.5rem;
     margin-left: 1rem;
   }
-`;
+`
 
-export default Menu;
+export default Menu

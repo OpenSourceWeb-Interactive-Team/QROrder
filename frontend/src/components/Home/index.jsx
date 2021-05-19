@@ -1,7 +1,12 @@
 import StyledHome from "./style";
+import MenuBoard from "../MenuBoard";
 
 function Home() {
-  return <StyledHome>Hi!</StyledHome>;
+  return (
+    <StyledHome>
+      <MenuBoard></MenuBoard>
+    </StyledHome>
+  );
 }
 
 export default Home;

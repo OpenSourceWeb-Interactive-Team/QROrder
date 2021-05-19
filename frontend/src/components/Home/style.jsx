@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-const Home = styled.div``;
+const Home = styled.div``
 
-export default Home;
+export default Home

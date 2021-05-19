@@ -1,5 +1,5 @@
-import Menu from "./Menu";
-import StyledMenuBoard from "./style";
+import Menu from './Menu'
+import StyledMenuBoard from './style'
 
 function MenuBoard() {
   return (
@@ -15,7 +15,7 @@ function MenuBoard() {
       <Menu></Menu>
       <Menu></Menu>
     </StyledMenuBoard>
-  );
+  )
 }
 
-export default MenuBoard;
+export default MenuBoard

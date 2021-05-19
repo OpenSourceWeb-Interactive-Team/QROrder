@@ -1,5 +1,5 @@
-import { AiOutlineShoppingCart, AiFillStar } from "react-icons/ai";
-import StyledMenu from "./style";
+import { AiOutlineShoppingCart, AiFillStar } from 'react-icons/ai'
+import StyledMenu from './style'
 
 function Menu() {
   return (
@@ -25,7 +25,7 @@ function Menu() {
         <AiOutlineShoppingCart />
       </div>
     </StyledMenu>
-  );
+  )
 }
 
-export default Menu;
+export default Menu

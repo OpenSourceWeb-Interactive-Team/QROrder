@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { AiOutlineClose } from 'react-icons/ai'
 
@@ -5,7 +6,14 @@ import StyledBasket from './style'
 import Product from './Product'
 import Selector from './Selector'
 function Basket() {
-  const totalPrice = useSelector(state => state.basket.price)
+  const [totalPrice, setTotalPrice] = useState(0)
+  const products = useSelector(state => state.basket.product)
+
+  useEffect(() => {
+    let price = 0
+    products.map(product => (price += product.price * product.quantity))
+    setTotalPrice(price)
+  }, [products])
 
   return (
     <StyledBasket>
@@ -16,8 +24,8 @@ function Basket() {
       <section>
         <Selector />
         <div className="products">
-          <Product title="밥" price={4000} />
-          <Product title="국" price={4000} />
+          <Product name="밥" price={4000} />
+          <Product name="국" price={4000} />
           <div className="total-price">
             총 주문금액
             <p>{totalPrice}원</p>

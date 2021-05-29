@@ -1,31 +1,32 @@
+import produce from 'immer'
+
 const SET_MEANS = 'basket/MEANS'
 const PLUS = 'basket/PLUS'
 const MINUS = 'basket/MINUS'
-const GET_INIT_PRICE = 'basket/GET_INIT_PRICE'
+const GET_INIT_PRODUCT = 'basket/GET_INIT_PRODUCT'
 
 export const setMeans = () => ({
   type: SET_MEANS,
 })
 
-export const plus = ({ price }) => ({
+export const plus = ({ name }) => ({
   type: PLUS,
-  payload: { price },
+  payload: { name },
 })
 
-export const minus = ({ price }) => ({
+export const minus = ({ name }) => ({
   type: MINUS,
-  payload: { price },
+  payload: { name },
 })
 
-export const getInitPrice = ({ price }) => ({
-  type: GET_INIT_PRICE,
-  payload: { price },
+export const getInitProduct = ({ name, quantity, price }) => ({
+  type: GET_INIT_PRODUCT,
+  payload: { name, quantity, price },
 })
 
 const initialState = {
   means: true,
-  price: 0,
-  
+  product: [],
 }
 
 export default function reducer(state = initialState, action) {
@@ -36,22 +37,25 @@ export default function reducer(state = initialState, action) {
         means: !state.means,
       }
     case PLUS:
-      return {
-        ...state,
-        price: state.price + action.payload.price,
-      }
+      return produce(state, draft => {
+        const index = draft.product.findIndex(product => product.name === action.payload.name)
+        draft.product[index].quantity++
+      })
 
     case MINUS:
-      return {
-        ...state,
-        price: state.price - action.payload.price,
-      }
+      return produce(state, draft => {
+        const index = draft.product.findIndex(product => product.name === action.payload.name)
+        draft.product[index].quantity--
+      })
 
-    case GET_INIT_PRICE:
-      return {
-        ...state,
-        price: state.price + action.payload.price,
-      }
+    case GET_INIT_PRODUCT:
+      return produce(state, draft => {
+        draft.product.push({
+          name: action.payload.name,
+          quantity: action.payload.quantity,
+          price: action.payload.price,
+        })
+      })
 
     default:
       return state

@@ -1,29 +1,29 @@
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { FiPlusSquare, FiMinusSquare } from 'react-icons/fi'
-import { plus, minus,getInitPrice } from '../../../modules/basket'
+import { plus, minus, getInitProduct } from '../../../modules/basket'
 
-function Product({ title, price }) {
+function Product({ name, price }) {
   const [quantity, setQuantity] = useState(1)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getInitPrice({ price }))
-  }, [dispatch, price])
+    dispatch(getInitProduct({ name, quantity, price }))
+  }, [])
 
   const itemPlus = () => {
     setQuantity(quantity + 1)
-    dispatch(plus({ price }))
+    dispatch(plus({ name }))
   }
 
   const itemMinus = () => {
     if (quantity === 0) return
     setQuantity(quantity - 1)
-    dispatch(minus({ price }))
+    dispatch(minus({ name }))
   }
   return (
     <div className="product">
-      <p className="title">{title}</p>
+      <p className="title">{name}</p>
       <div className="detail">
         <div className="quantity">
           <FiMinusSquare className="minus-icon" onClick={itemMinus} />

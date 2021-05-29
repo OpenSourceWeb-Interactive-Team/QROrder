@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const OrderProcess = styled.div `
+const OrderProcess = styled.div`
     height: auto;
     padding: 0.5em 0;
     text-align: center; 
@@ -29,4 +29,4 @@ const OrderProcess = styled.div `
 }
 `
 
-export default OrderProcess;
+export default OrderProcess

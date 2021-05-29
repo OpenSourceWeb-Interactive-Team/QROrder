@@ -6,15 +6,22 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
         Id(index);
     }
 
+    const frame = {
+        margin: '0.5em auto',
+        textAlign: 'center',
+        alignItems: 'center',
+    }
+
     const containerStyles = {
         textAlign: 'center',
         zIndex: '0',
         position: "relative",
+        display: 'block',
         height: '2%',
         width: '70%',
         backgroundColor: "#e0e0de",
         borderRadius: 50,
-        margin: 'auto'
+        margin: 'auto',
     }
 
     const fillerStyles = {
@@ -51,7 +58,7 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
     }
 
     return (
-        <div>
+        <div style={frame}>
             <div style={containerStyles}>
                 <div style={fillerStyles}>
                     <span style={labelStyles}></span>
@@ -65,7 +72,9 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
                         handleOnClick(2)}></div>
                 </div>
             </div>
+            
         </div>
+        
     );
 };
 

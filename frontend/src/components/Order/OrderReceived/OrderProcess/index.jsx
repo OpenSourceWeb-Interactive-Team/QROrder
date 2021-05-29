@@ -38,9 +38,9 @@ function OrderProcess() {
             document.getElementById('table').style.color= '#66FF66';
             document.getElementById(id).style.borderColor = '#66FF66';
             document.getElementById(id).style.backgroundColor = '#66FF66';
-            document.getElementById(0).style.backgroundColor = '#fff';
+            document.getElementById(0).style.backgroundColor = '#66FF66';
             document.getElementById(2).style.backgroundColor = '#e0e0de';
-            document.getElementById(0).style.borderColor = '#e0e0de';
+            document.getElementById(0).style.borderColor = '#66FF66';
             document.getElementById(2).style.borderColor = '#e0e0de';
         }
         else if (id === 2) {
@@ -50,11 +50,11 @@ function OrderProcess() {
             document.getElementById('background').style.background = 'linear-gradient(#F88EF4 20%, #fff 20%)';
             document.getElementById('table').style.color= '#F88EF4';
             document.getElementById(id).style.borderColor = '#F88EF4';
-            document.getElementById(0).style.borderColor = '#e0e0de';
-            document.getElementById(1).style.borderColor = '#e0e0de';
+            document.getElementById(0).style.borderColor = '#F88EF4';
+            document.getElementById(1).style.borderColor = '#F88EF4';
             document.getElementById(id).style.backgroundColor = '#F88EF4';
-            document.getElementById(0).style.backgroundColor = '#fff';
-            document.getElementById(1).style.backgroundColor = '#fff';
+            document.getElementById(0).style.backgroundColor = '#F88EF4';
+            document.getElementById(1).style.backgroundColor = '#F88EF4';
         }
         console.log(id);
         console.log(completed);
@@ -67,7 +67,12 @@ function OrderProcess() {
             <ProgressBar
                 bgcolor={bgcolor}
                 completed={completed}
-                Id={updateid}/>
+                Id={updateid} />
+            <div className="processtext">
+                <p>접수 중</p>
+                <p>준비 중</p>
+                <p>준비 끝</p>
+            </div>
         </StyledOrderProcess>
     )
 }

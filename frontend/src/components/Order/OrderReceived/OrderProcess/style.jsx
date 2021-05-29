@@ -16,6 +16,16 @@ const OrderProcess = styled.div `
         padding: 0.5em 0;
         font-weight: bold;
     }
+    .processtext{
+        width: 70%;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5em auto;
+        .text{
+            margin: 10px;
+        }
+    }
 }
 `
 

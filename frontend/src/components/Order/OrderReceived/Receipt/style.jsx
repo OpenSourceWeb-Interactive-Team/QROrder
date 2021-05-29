@@ -21,7 +21,6 @@ const Receipt = styled.div`
             font-weight: bold;
         }
         .num{
-            color: #afafaf;
             display: inline-block;
             float: right;
         }
@@ -29,6 +28,23 @@ const Receipt = styled.div`
     .receipt{
         clear: both;
         padding: 1em 0 0 0;
+    }
+    .tot_price{
+        border-top: 2px solid black;
+        padding: 1em 0;
+        .title1{
+            display: inline-block;
+            text-align: left;
+            color: rgb(0,0,0);
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .num1{
+            font-size: 1.3em;
+            font-weight: bold;
+            display: inline-block;
+            float: right;
+        }
     }
 `
 

@@ -16,7 +16,10 @@ export default function Receipt() {
                     <MenuInfo></MenuInfo>
                     <MenuInfo></MenuInfo>
                 </div>
-
+                <div className="tot_price">
+                    <p className="title1">Total</p>
+                    <p className="num1">24,000원</p>
+                </div>
             </div>
         </StyledReceipt>
     );

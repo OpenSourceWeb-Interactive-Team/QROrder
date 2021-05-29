@@ -1,4 +1,6 @@
 import React from "react";
+import { AiOutlineCheckSquare } from 'react-icons/ai'
+import { FiShoppingBag, FiSmile } from "react-icons/fi";
 
 const ProgressBar = ({ bgcolor, completed, Id }) => {
 
@@ -18,7 +20,7 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
         position: "relative",
         display: 'block',
         height: '2%',
-        width: '70%',
+        width: '90%',
         backgroundColor: "#e0e0de",
         borderRadius: 50,
         margin: 'auto',
@@ -57,6 +59,12 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
         fontWeight: 'bold'
     }
 
+    const icon = {
+        color: 'white',
+        margin: '2.8px',
+        verticalAlign: 'middle',
+    }
+
     return (
         <div style={frame}>
             <div style={containerStyles}>
@@ -65,11 +73,18 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
                 </div>
                 <div style={circles}>
                     <div style={circlestyles} id={0} onClick={() =>
-                        handleOnClick(0)}></div>
+                        handleOnClick(0)}>
+                        <FiShoppingBag size={25} style={icon}></FiShoppingBag>
+                        </div>
                     <div style={circlestyles} id={1} onClick={() =>
-                        handleOnClick(1)}></div>
+                        handleOnClick(1)}>
+                        <AiOutlineCheckSquare size={25} style={icon}></AiOutlineCheckSquare>
+                        </div>
                     <div style={circlestyles} id={2} onClick={() =>
-                        handleOnClick(2)}></div>
+                        handleOnClick(2)}>
+                        <FiSmile size={25} style={icon}></FiSmile>
+                        
+                        </div>
                 </div>
             </div>
             

@@ -21,10 +21,11 @@ const OrderReceived = styled.div`
         font-size: 1rem;
         font-weight: bold;
         border-radius: 5px 5px 5px 5px;
-        width: calc(100% - 23rem);
-        display : -webkit-box;
-        -webkit-line-clamp : 3;
-        -webkit-box-orient: vertical;
+        width: 7em;
+        // width: calc(100% - 23rem);
+        display : block;
+        // -webkit-line-clamp : 1;
+        // -webkit-box-orient: vertical;
         color: #0AC9FF;
         text-align: center;
         background-color: #FFFFFF;

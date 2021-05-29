@@ -17,7 +17,7 @@ const OrderProcess = styled.div `
         font-weight: bold;
     }
     .processtext{
-        width: 70%;
+        width: 90%;
         text-align: center;
         display: flex;
         justify-content: space-between;

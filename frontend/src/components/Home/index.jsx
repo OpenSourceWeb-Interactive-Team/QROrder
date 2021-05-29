@@ -1,10 +1,10 @@
 import StyledHome from './style'
-import Payment from '../Payment'
+import MenuBoard from '../MenuBoard'
 
 function Home() {
   return (
     <StyledHome>
-      <Payment></Payment>
+      <MenuBoard></MenuBoard>
     </StyledHome>
   )
 }

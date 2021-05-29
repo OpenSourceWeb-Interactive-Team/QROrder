@@ -82,6 +82,7 @@ const Menu = styled.div`
     justify-content: center;
     padding: 0.5rem;
     margin-left: 1rem;
+    cursor: pointer;
   }
 `
 

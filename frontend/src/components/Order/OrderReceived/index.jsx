@@ -8,8 +8,8 @@ function OrderReceived() {
   return (
     <StyledOrderReceived>
       <div className="page">
-        <div className="frame">
-          <div className="table">테이블주문접수</div>
+        <div className="frame" id="background">
+          <div className="table" id="table">테이블주문접수</div>
           <p className="food">GG고</p>
           <DotButton></DotButton>
           <OrderProcess></OrderProcess>

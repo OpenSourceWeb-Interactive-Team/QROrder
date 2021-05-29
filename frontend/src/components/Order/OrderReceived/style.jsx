@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 const OrderReceived = styled.div`
-  padding: 0.8rem 0rem;
+  padding: 0.8rem 0rem; overflow : hidden;
   .page{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    overflow : hidden;
+    
     .frame{
-      width: 30em; height: auto;
+      width: 30em; height: auto; overflow : hidden;
       background: linear-gradient(#0AC9FF 20%, #fff 20%);
       border-radius: 10px 10px 10px 10px;
       box-shadow: 0px 0px 3px 3px #dcdcdc;
@@ -21,7 +22,6 @@ const OrderReceived = styled.div`
         font-weight: bold;
         border-radius: 5px 5px 5px 5px;
         width: calc(100% - 23rem);
-        overflow : hidden;
         display : -webkit-box;
         -webkit-line-clamp : 3;
         -webkit-box-orient: vertical;
@@ -32,7 +32,7 @@ const OrderReceived = styled.div`
 
       .food{
         font-size: 1.3em;
-        padding: 10px 0;
+        padding: 0.5em 0;
         color: white;
         float: left;
         display:inline;

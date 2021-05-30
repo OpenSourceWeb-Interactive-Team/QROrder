@@ -1,26 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { RiCoupon2Line } from 'react-icons/ri'
+import { IoBagHandleOutline } from 'react-icons/io5'
+import { GiForkKnifeSpoon } from 'react-icons/gi'
+
 import { toPriceFormat } from '../../utils/format'
 import StyledPayment from './style'
-
-const order = {
-  type: '포장',
-  store: '초밥천국',
-  basket: [
-    {
-      id: 1,
-      name: '우동',
-      count: 2,
-      price: 3000,
-    },
-    {
-      id: 2,
-      name: '초밥',
-      count: 1,
-      price: 8000,
-    },
-  ],
-}
 
 const customer = {
   nickname: '제리',
@@ -52,13 +37,15 @@ function Payment() {
     coupon_number: 1,
   })
 
-  function getTotalPrice() {
-    const totalPrice = order.basket.reduce((prev, cur) => {
-      return prev + cur.price * cur.count
-    }, 0)
-
-    return totalPrice
-  }
+  const [totalPrice, setTotalPrice] = useState(0)
+  const means = useSelector(state => state.basket.means)
+  const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
+  console.log(products)
+  useEffect(() => {
+    let price = 0
+    products.map(product => (price += product.price * product.quantity))
+    setTotalPrice(price)
+  }, [products])
 
   function getCoupon(number) {
     const coupon = coupons.find(coupon => coupon.number === number)
@@ -66,7 +53,6 @@ function Payment() {
   }
 
   function getDiscountTotalPrice() {
-    const totalPrice = getTotalPrice()
     if (discount.select === false) return totalPrice
 
     const coupon = getCoupon(discount.coupon_number)
@@ -95,14 +81,26 @@ function Payment() {
     <StyledPayment>
       <div className="box order">
         <div className="title">주문 정보</div>
-        <div className="type">포장</div>
-        <div className="store">초밥천국</div>
+        <div className="type">
+          {means ? (
+            <>
+              <p>먹고갈게요</p>
+              <GiForkKnifeSpoon className="fork-icon" />
+            </>
+          ) : (
+            <>
+              <p>포장할게요</p>
+              <IoBagHandleOutline className="bag-icon" />
+            </>
+          )}
+        </div>
+        <div className="store">우리집밥상</div>
         <div className="menu-list">
-          {order.basket.map(menu => (
-            <div className="menu" key={menu.id}>
-              <div className="name">{menu.name}</div>
-              <div className="count">{menu.count}</div>
-              <div className="price">{toPriceFormat(menu.count * menu.price)}</div>
+          {products.map(product => (
+            <div className="menu" key={product.name}>
+              <div className="name">{product.name}</div>
+              <div className="count">{product.quantity}</div>
+              <div className="price">{toPriceFormat(product.quantity * product.price)}</div>
             </div>
           ))}
         </div>
@@ -151,7 +149,7 @@ function Payment() {
       <div className="box total">
         <div className="title">결제금액</div>
         <div className="total-price">
-          <div className={discount.select ? 'original line' : 'original'}>{toPriceFormat(getTotalPrice())}</div>
+          <div className={discount.select ? 'original line' : 'original'}>{toPriceFormat(totalPrice)}</div>
           {discount.select && <div className="discount">{toPriceFormat(getDiscountTotalPrice())}</div>}
         </div>
       </div>

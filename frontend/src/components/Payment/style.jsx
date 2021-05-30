@@ -32,6 +32,7 @@ const Payment = styled.div`
 
     &.order {
       .type {
+        display: flex;
         margin: 5px 0px;
       }
       .store {

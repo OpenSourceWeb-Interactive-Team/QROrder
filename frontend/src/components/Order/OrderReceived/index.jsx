@@ -12,7 +12,7 @@ function OrderReceived() {
           <div className="table" id="table">
             테이블주문접수
           </div>
-          <p className="food">GG고</p>
+          <p className="food">우리집밥상</p>
           <DotButton></DotButton>
           <OrderProcess></OrderProcess>
           <OrderInfo></OrderInfo>

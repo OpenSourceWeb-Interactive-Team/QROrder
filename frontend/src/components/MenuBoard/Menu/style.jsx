@@ -5,17 +5,17 @@ const Menu = styled.div`
   padding: 0.8rem 0rem;
   border-bottom: 1px solid #eee8e8;
 
-  .image {
-    background-image: url('http://d20aeo683mqd6t.cloudfront.net/ko/articles/title_images/000/039/143/medium/IMG_5649%E3%81%AE%E3%82%B3%E3%83%92%E3%82%9A%E3%83%BC.jpg?2019');
-    background-size: cover;
-    height: 5rem;
-    width: 5rem;
+  .image img {
+    border-radius: 0.8rem;
+    height: 4rem;
+    width: 4.5rem;
+    margin-top: 0.5rem;
     margin-right: 0.6rem;
   }
 
   .contents {
     width: calc(100% - 6rem);
-    padding: 0.4rem 0rem;
+    padding: 0.8rem 0rem;
 
     .name {
       font-weight: 500;

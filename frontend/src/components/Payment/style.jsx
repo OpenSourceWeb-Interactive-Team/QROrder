@@ -32,6 +32,7 @@ const Payment = styled.div`
 
     &.order {
       .type {
+        display: flex;
         margin: 5px 0px;
       }
       .store {
@@ -48,8 +49,8 @@ const Payment = styled.div`
           .count {
             margin-left: 3px;
           }
-          .count:before {
-            content: 'x';
+          .count:after {
+            content: '개';
           }
           .price {
             margin-left: auto;

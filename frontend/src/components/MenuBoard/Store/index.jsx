@@ -1,18 +1,14 @@
 import StyledStore from './style'
 import { IoIosCall, IoIosPin } from 'react-icons/io'
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineQrcode } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import GoogleMapReact from 'google-map-react'
 import API_KEY from './api.key.json'
 
 function Store() {
-  const mapStyles = {
-    width: '100%',
-    height: '100%',
-  }
-
   const center = {
-    lat: 36.632358,
-    lng: 127.4585219,
+    lat: 36.634398969276475,
+    lng: 127.46114835398262,
   }
   const zoom = 16
 
@@ -24,10 +20,15 @@ function Store() {
 
   return (
     <StyledStore>
-      <div className="name">맘스터치 충북대점</div>
+      <div className="name">우리집밥상</div>
+      <Link to="/qrcode">
+        <div className="qrcode">
+          <AiOutlineQrcode />
+        </div>
+      </Link>
       <div className="number">
         <IoIosCall className="phone-icon" />
-        02-452-1424
+        043-263-3999
       </div>
       <div className="score">
         <AiFillStar className="star-icon" />
@@ -37,7 +38,7 @@ function Store() {
         <AiFillStar className="star-icon" />
         <div className="number">4.8</div>
       </div>
-      <div className="address">충북 청주시 서원구 내수동로102번길 36</div>
+      <div className="address">충청북도 청주시 서원구 사창동 258-4 1층</div>
       <div className="position" style={{ height: '100px', width: '200px' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY.key }}

@@ -6,14 +6,23 @@ const Store = styled.div`
   padding: 20px 0px;
   align-items: center;
   margin: 20px 10px;
+  position: relative;
 
-  /* text-align: center; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
 
   .name {
     font-size: 1.3rem;
   }
+
+  .qrcode {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
   & > .number {
     display: flex;
     margin-top: 9px;

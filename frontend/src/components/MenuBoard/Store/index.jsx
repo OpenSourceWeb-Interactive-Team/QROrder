@@ -1,6 +1,7 @@
 import StyledStore from './style'
 import { IoIosCall, IoIosPin } from 'react-icons/io'
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineQrcode } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import GoogleMapReact from 'google-map-react'
 import API_KEY from './api.key.json'
 
@@ -25,6 +26,11 @@ function Store() {
   return (
     <StyledStore>
       <div className="name">맘스터치 충북대점</div>
+      <Link to="/qrcode">
+        <div className="qrcode">
+          <AiOutlineQrcode />
+        </div>
+      </Link>
       <div className="number">
         <IoIosCall className="phone-icon" />
         02-452-1424

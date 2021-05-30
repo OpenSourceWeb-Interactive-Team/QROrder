@@ -3,6 +3,7 @@ import OrderReceived from './components/Order/OrderReceived'
 import Home from './components/Home'
 import Basket from './components/Basket'
 import Payment from './components/Payment'
+import QRCode from './components/QRCode'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route exact path="/basket" component={Basket} />
         <Route exact path="/ordered" component={OrderReceived} />
         <Route exact path="/payment" component={Payment} />
+        <Route exact path="/qrcode" component={QRCode} />
       </Switch>
     </BrowserRouter>
   )

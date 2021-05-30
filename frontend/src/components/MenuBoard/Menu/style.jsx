@@ -84,6 +84,10 @@ const Menu = styled.div`
     margin-left: 1rem;
     cursor: pointer;
   }
+  .shop:hover {
+    color: white;
+    background: #47ce47;
+  }
 `
 
 export default Menu

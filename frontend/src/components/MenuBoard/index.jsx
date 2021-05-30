@@ -2,21 +2,15 @@ import Menu from './Menu'
 import Store from './Store'
 import StyledMenuBoard from './style'
 import BasketButton from './BasketButton'
+import { menuDetails } from '../../__mock__/menu'
 
 function MenuBoard() {
   return (
     <StyledMenuBoard>
       <Store />
-      {/* <div>메뉴판</div> */}
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
-      <Menu></Menu>
+      {menuDetails.map(menuDetail => (
+        <Menu menuDetail={menuDetail}></Menu>
+      ))}
       <BasketButton />
     </StyledMenuBoard>
   )

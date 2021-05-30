@@ -17,6 +17,42 @@ const BasketButton = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
   }
+
+  .count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 19px;
+    height: 19px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a3737;
+  }
+
+  .add {
+    animation: downtop 1.2s;
+    position: absolute;
+    margin-left: 1.2rem;
+    font-size: 0.8rem;
+    animation-fill-mode: forwards;
+    color: black;
+    font-weight: 700;
+  }
+
+  @keyframes downtop {
+    from {
+      margin-bottom: 0.8rem;
+    }
+
+    to {
+      margin-bottom: 4rem;
+      opacity: 0;
+    }
+  }
 `
 
 export default BasketButton

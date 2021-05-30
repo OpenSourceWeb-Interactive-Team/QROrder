@@ -35,7 +35,7 @@ const coupons = [
 function Payment() {
   const [discount, setDiscount] = useState({
     select: false,
-    coupon_number: 1,
+    coupon_number: 0,
   })
 
   const [totalPrice, setTotalPrice] = useState(0)
@@ -133,15 +133,21 @@ function Payment() {
       <div className="box discount">
         <div className="title">할인쿠폰</div>
         <div className="coupon-list">
-          <div className={discount.coupon_number === 1 ? 'coupon select' : 'coupon'} onClick={() => selectCoupon(1)}>
+          <div
+            className={discount.coupon_number === 1 && discount.select ? 'coupon select' : 'coupon'}
+            onClick={() => selectCoupon(1)}>
             <RiCoupon2Line className="icon" />
             <div className="name">10% 할인 쿠폰</div>
           </div>
-          <div className={discount.coupon_number === 2 ? 'coupon select' : 'coupon'} onClick={() => selectCoupon(2)}>
+          <div
+            className={discount.coupon_number === 2 && discount.select ? 'coupon select' : 'coupon'}
+            onClick={() => selectCoupon(2)}>
             <RiCoupon2Line className="icon" />
             <div className="name">15% 할인 쿠폰</div>
           </div>
-          <div className={discount.coupon_number === 3 ? 'coupon select' : 'coupon'} onClick={() => selectCoupon(3)}>
+          <div
+            className={discount.coupon_number === 3 && discount.select ? 'coupon select' : 'coupon'}
+            onClick={() => selectCoupon(3)}>
             <RiCoupon2Line className="icon" />
             <div className="name">5000원 할인 쿠폰</div>
           </div>

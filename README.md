@@ -5,7 +5,9 @@
 ## config file
 
 src/components/MenuBoard/Store 폴더 내에 있는 `api.key.example.json`과 같은 형식으로(아래참고)
+
 src/components/MenuBoard/Store 폴더 내에 `api.key.json` 파일 제작
+
 google에서 발급받은 토큰 값 삽입
 
 ```

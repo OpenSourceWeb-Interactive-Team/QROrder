@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { RiCoupon2Line } from 'react-icons/ri'
 import { IoBagHandleOutline } from 'react-icons/io5'
 import { GiForkKnifeSpoon } from 'react-icons/gi'
@@ -153,10 +154,11 @@ function Payment() {
           {discount.select && <div className="discount">{toPriceFormat(getDiscountTotalPrice())}</div>}
         </div>
       </div>
-
-      <div className="bottom">
-        <div className="pay">{toPriceFormat(getDiscountTotalPrice())}원 결제하기</div>
-      </div>
+      <Link to="ordered">
+        <div className="bottom">
+          <div className="pay">{toPriceFormat(getDiscountTotalPrice())}원 결제하기</div>
+        </div>
+      </Link>
     </StyledPayment>
   )
 }

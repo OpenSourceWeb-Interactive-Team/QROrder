@@ -1,19 +1,33 @@
+import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import StyledOrderInfo from './style'
+import { toPriceFormat } from '../../../../utils/format'
 
 export default function OrderInfo() {
+  const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
+  const [totalPrice, setTotalPrice] = useState(0)
+
+  useEffect(() => {
+    let price = 0
+    products.map(product => (price += product.price * product.quantity))
+    setTotalPrice(price)
+  }, [products])
+
   return (
     <StyledOrderInfo>
       <div className="orderinfo">
         <p className="inline">주문시간</p>
-        <p className="text">2021/05/22/12/38 주문</p>
+        <p className="text">2021/05/22 12시 38분 주문</p>
         <br />
         <br />
         <p className="inline">주문메뉴</p>
-        <p className="menu_name">지지고 반반</p>
+        <p className="menu_name">
+          {products[0].name}외 {products.length - 1}건
+        </p>
         <br />
         <br />
         <p className="inline">결제금액</p>
-        <p className="menu_price">결제예정 8,000원</p>
+        <p className="menu_price">{toPriceFormat(totalPrice)}원</p>
         <br />
         <br />
       </div>

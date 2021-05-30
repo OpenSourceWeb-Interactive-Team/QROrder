@@ -49,8 +49,8 @@ const Payment = styled.div`
           .count {
             margin-left: 3px;
           }
-          .count:before {
-            content: 'x';
+          .count:after {
+            content: '개';
           }
           .price {
             margin-left: auto;

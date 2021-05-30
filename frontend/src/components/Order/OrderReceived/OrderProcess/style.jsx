@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const OrderProcess = styled.div`
     height: auto;
-    padding: 0.5em 0;
+    padding: 0.8em 0;
     text-align: center; 
     clear:both;
     display: block;

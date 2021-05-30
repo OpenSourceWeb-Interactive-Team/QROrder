@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 const OrderInfo = styled.div`
-  padding: 1em 0 0 0;
+  /* padding: 1em 0 0 0; */
+  margin: 5px 0;
+  padding: 1.3em 0;
   font-size: 0.8em;
   .inline {
     padding: 0.5em 0 0 0;

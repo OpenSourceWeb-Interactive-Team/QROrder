@@ -5,12 +5,18 @@ import { toPriceFormat } from '../../../../utils/format'
 
 export default function OrderInfo() {
   const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
+  const discount = useSelector(state => state.basket.discount)
+
   const [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
     let price = 0
     products.map(product => (price += product.price * product.quantity))
-    setTotalPrice(price)
+    if (discount.type === 'percent') {
+      setTotalPrice(Number(price * (1 - discount.amount / 100)))
+      return
+    }
+    setTotalPrice(price - discount.amount)
   }, [products])
 
   return (

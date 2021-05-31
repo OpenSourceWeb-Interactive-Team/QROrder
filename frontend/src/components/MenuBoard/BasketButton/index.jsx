@@ -12,7 +12,7 @@ function BasketButton() {
   }, 0)
 
   useEffect(() => {
-    if(total === 0) return
+    if (total === 0) return
     const plus = document.createElement('div')
     plus.classList.add('add')
     plus.textContent = '+1'

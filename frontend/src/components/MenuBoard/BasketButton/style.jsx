@@ -25,12 +25,13 @@ const BasketButton = styled.div`
     width: 19px;
     height: 19px;
     background-color: #ffffff;
+    color: #03c759;
     border-radius: 50%;
+    border: 1px solid #03c759;
     font-size: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3a3737;
   }
 
   .add {
@@ -39,7 +40,7 @@ const BasketButton = styled.div`
     margin-left: 1.2rem;
     font-size: 0.8rem;
     animation-fill-mode: forwards;
-    color: black;
+    color: gray;
     font-weight: 700;
   }
 

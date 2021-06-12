@@ -12,11 +12,11 @@ function Chart() {
     },
     animation: {
       startup: true,
-      duration: 1000,
+      duration: 1200,
       easing: 'linear',
     },
-    hAxis: { textPosition: 'none' },
-    vAxis: { textPosition: 'in', gridlines: 'none' },
+    hAxis: { textPosition: 'none', gridlines: { count: 1 } },
+    vAxis: { textPosition: 'in', gridlines: { count: 1 } },
     annotations: {
       textStyle: {
         fontSize: 12,
@@ -33,6 +33,11 @@ function Chart() {
     chartArea: {
       width: '90%',
       height: '90%',
+    },
+    animation: {
+      startup: true,
+      duration: 1000,
+      easing: 'linear',
     },
     pieSliceTextStyle: { bold: true, color: 'white', fontSize: 14 },
   }

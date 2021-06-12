@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { RiCoupon2Line } from 'react-icons/ri'
 import { IoBagHandleOutline } from 'react-icons/io5'
 import { GiForkKnifeSpoon } from 'react-icons/gi'
+import { discountCash } from '../../modules/basket'
 
 import { toPriceFormat } from '../../utils/format'
 import StyledPayment from './style'
@@ -41,7 +42,7 @@ function Payment() {
   const [totalPrice, setTotalPrice] = useState(0)
   const means = useSelector(state => state.basket.means)
   const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
-  console.log(products)
+  const dispatch = useDispatch()
   useEffect(() => {
     let price = 0
     products.map(product => (price += product.price * product.quantity))
@@ -135,19 +136,28 @@ function Payment() {
         <div className="coupon-list">
           <div
             className={discount.coupon_number === 1 && discount.select ? 'coupon select' : 'coupon'}
-            onClick={() => selectCoupon(1)}>
+            onClick={() => {
+              selectCoupon(1)
+              dispatch(discountCash({ type: 'percent', amount: 10 }))
+            }}>
             <RiCoupon2Line className="icon" />
             <div className="name">10% 할인 쿠폰</div>
           </div>
           <div
             className={discount.coupon_number === 2 && discount.select ? 'coupon select' : 'coupon'}
-            onClick={() => selectCoupon(2)}>
+            onClick={() => {
+              selectCoupon(2)
+              dispatch(discountCash({ type: 'percent', amount: 15 }))
+            }}>
             <RiCoupon2Line className="icon" />
             <div className="name">15% 할인 쿠폰</div>
           </div>
           <div
             className={discount.coupon_number === 3 && discount.select ? 'coupon select' : 'coupon'}
-            onClick={() => selectCoupon(3)}>
+            onClick={() => {
+              selectCoupon(3)
+              dispatch(discountCash({ type: 'money', amount: 5000 }))
+            }}>
             <RiCoupon2Line className="icon" />
             <div className="name">5000원 할인 쿠폰</div>
           </div>

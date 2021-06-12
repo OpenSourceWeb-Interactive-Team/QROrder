@@ -4,6 +4,7 @@ const SET_MEANS = 'basket/MEANS'
 const PLUS = 'basket/PLUS'
 const MINUS = 'basket/MINUS'
 const GET_INIT_PRODUCT = 'basket/GET_INIT_PRODUCT'
+const DISCOUNT = 'basket/DISCOUNT'
 
 export const setMeans = () => ({
   type: SET_MEANS,
@@ -24,9 +25,15 @@ export const getInitProduct = ({ name, quantity, price }) => ({
   payload: { name, quantity, price },
 })
 
+export const discountCash = ({ type, amount }) => ({
+  type: DISCOUNT,
+  payload: { type, amount },
+})
+
 const initialState = {
   means: true,
   product: [],
+  discount: {},
 }
 
 export default function reducer(state = initialState, action) {
@@ -56,7 +63,14 @@ export default function reducer(state = initialState, action) {
           price: action.payload.price,
         })
       })
-
+    case DISCOUNT:
+      return {
+        ...state,
+        discount: {
+          type: action.payload.type,
+          amount: action.payload.amount,
+        },
+      }
     default:
       return state
   }

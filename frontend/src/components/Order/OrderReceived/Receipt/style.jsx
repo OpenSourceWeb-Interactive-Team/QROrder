@@ -13,28 +13,42 @@ const Receipt = styled.div`
     padding: 0 0 1em 0;
     display: block;
     border-bottom: 2px solid black;
+    display: flex;
     .title {
-      display: inline-block;
-      text-align: left;
+      margin-right: auto;
       color: rgb(0, 0, 0);
       font-size: 1em;
       font-weight: bold;
     }
     .num {
-      display: inline-block;
-      float: right;
+      margin-left: auto;
     }
   }
   .receipt {
     clear: both;
     padding: 1em 0 0 0;
   }
+
+  .discount {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    .title {
+      margin-right: auto;
+    }
+    .amount {
+      margin-left: auto;
+      color: #df3030;
+    }
+  }
+
   .tot_price {
     border-top: 2px solid black;
     padding: 1em 0;
+    display: flex;
     .title1 {
       display: inline-block;
-      text-align: left;
+      margin-right: auto;
       color: rgb(0, 0, 0);
       font-size: 1.3em;
       font-weight: bold;
@@ -43,7 +57,7 @@ const Receipt = styled.div`
       font-size: 1.3em;
       font-weight: bold;
       display: inline-block;
-      float: right;
+      margin-left: auto;
     }
   }
 `

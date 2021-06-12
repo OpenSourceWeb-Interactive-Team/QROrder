@@ -23,6 +23,9 @@ export default function Receipt() {
     } else if (discount.type === 'money') {
       setDiscountAmount(discount.amount)
       setTotalPrice(price - discountAmount)
+    } else {
+      setDiscountAmount(0)
+      setTotalPrice(price - discountAmount)
     }
   }, [products])
 

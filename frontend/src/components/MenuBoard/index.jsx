@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Menu from './Menu'
 import Store from './Store'
 import Chart from './chart'
+import Carousell from './carousel'
 import StyledMenuBoard from './style'
 import BasketButton from './BasketButton'
 import { menuDetails } from '../../__mock__/menu'
@@ -22,6 +23,7 @@ function MenuBoard() {
   return (
     <StyledMenuBoard>
       <Store />
+      <Carousell />
       <Chart />
       {menuDetails.map(menuDetail => (
         <Menu key={menuDetail.name} menuDetail={menuDetail}></Menu>

@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
+var stores = require('../__mocks__/stores.json')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.send("Hello QROrder")
-});
+router.get('/store/:storeId', function (req, res) {
+  const storeId = req.params.storeId
+  const store = stores.find(store => store.id == storeId)
+  res.json(store)
+})
 
-module.exports = router;
+module.exports = router

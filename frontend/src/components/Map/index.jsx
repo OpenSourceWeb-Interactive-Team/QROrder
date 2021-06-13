@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import StyledMap from './style'
 import { IoIosPin } from 'react-icons/io'
 import { IoFastFoodOutline } from 'react-icons/io5'
@@ -8,12 +8,16 @@ import { FaPizzaSlice, FaFish } from 'react-icons/fa'
 import GoogleMapReact from 'google-map-react'
 import API_KEY from '../MenuBoard/Store/api.key.json'
 import Drawer from './Drawer'
+import useStore from '../../hooks/useStore'
 
 function RestaurantMap() {
   const [drawerState, setDrawerState] = useState(false)
+  const [restaurant, setRestaurant] = useState()
+  const stores = useStore()
 
-  const onSelectRestaurant = useCallback(e => {
+  const onSelectRestaurant = useCallback((e, store) => {
     setDrawerState(true)
+    setRestaurant(store)
     e.stopPropagation()
   }, [])
 
@@ -27,22 +31,41 @@ function RestaurantMap() {
   }
   const zoom = 16
 
-  const BasePin = ({ Icon, color = 'black', size = '1.8rem' }) => (
+  const Pin = ({ Icon, color = 'black', size = '1.8rem', store }) => (
     <Icon
-      className="base-pin"
+      className="pin"
       style={{
         color,
         fontSize: size,
         background: color === 'black' && 'white',
         borderRadius: color === 'black' && '50%',
       }}
-      onClick={e => onSelectRestaurant(e)}
+      onClick={e => onSelectRestaurant(e, store)}
     />
   )
+
+  const getIconName = ({ type }) => {
+    switch (type) {
+      case 'hamburger':
+        return IoFastFoodOutline
+      case 'chicken':
+        return GiChickenOven
+      case 'fish':
+        return FaFish
+      case 'rice':
+        return GiHotMeal
+      case 'pizza':
+        return FaPizzaSlice
+      default:
+        return GiHotMeal
+    }
+  }
 
   const options = {
     fullscreenControl: false,
   }
+
+  if (!stores) return <></>
   return (
     <StyledMap>
       <div className="position" style={{ height: '100vh', width: '100vw' }} onClick={() => handleDrawer()}>
@@ -51,14 +74,18 @@ function RestaurantMap() {
           defaultCenter={center}
           defaultZoom={zoom}
           options={options}>
-          <BasePin Icon={IoIosPin} color="#e93737" size="2rem" lat={center.lat} lng={center.lng} />
-          <BasePin Icon={IoFastFoodOutline} lat={36.63320233130599} lng={127.45270562897606} />
-          <BasePin Icon={GiChickenOven} lat={36.63297570941198} lng={127.45448311529408} />
-          <BasePin Icon={FaFish} lat={36.63385553185957} lng={127.45714103876028} />
-          <BasePin Icon={GiHotMeal} lat={36.63277574836374} lng={127.46051327915802} />
-          <BasePin Icon={FaPizzaSlice} lat={36.6357484491276} lng={127.45865273273168} />
+          {stores.map(store => (
+            <Pin
+              key={store.name}
+              Icon={getIconName(store.icon)}
+              lat={store.position[0]}
+              lng={store.position[1]}
+              store={store}
+            />
+          ))}
+          <Pin Icon={IoIosPin} color="#e93737" size="2rem" lat={center.lat} lng={center.lng} />
         </GoogleMapReact>
-        {drawerState && <Drawer />}
+        {drawerState && <Drawer restaurant={restaurant} />}
       </div>
     </StyledMap>
   )

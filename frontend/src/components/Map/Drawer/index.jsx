@@ -12,9 +12,11 @@ function Drawer({ restaurant }) {
           />
         </picture>
         <div className="info">
-          <div className="name">식당이름</div>
-          <div className="address">주소</div>
-          <div className="menu">메뉴이름 1원</div>
+          <div className="name">{restaurant.name}</div>
+          <div className="address">{restaurant.address}</div>
+          <div className="menu">
+            {restaurant.menu[0].name} {restaurant.menu[0].price}원
+          </div>
         </div>
       </StyledDrawer>
     </Link>

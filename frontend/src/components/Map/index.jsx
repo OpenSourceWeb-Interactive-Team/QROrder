@@ -44,7 +44,7 @@ function RestaurantMap() {
     />
   )
 
-  const getIconName = ({ type }) => {
+  const getIconName = type => {
     switch (type) {
       case 'hamburger':
         return IoFastFoodOutline
@@ -68,7 +68,7 @@ function RestaurantMap() {
   if (!stores) return <></>
   return (
     <StyledMap>
-      <div className="position" style={{ height: '100vh', width: '100vw' }} onClick={() => handleDrawer()}>
+      <div className="position" style={{ height: '100vh', width: '100%' }} onClick={() => handleDrawer()}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY.key }}
           defaultCenter={center}

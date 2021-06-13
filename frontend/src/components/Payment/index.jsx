@@ -160,7 +160,7 @@ function Payment() {
           {discount.select && <div className="discount">{toPriceFormat(getDiscountTotalPrice())}</div>}
         </div>
       </div>
-      <Link to="ordered">
+      <Link to="/ordered">
         <div className="bottom">
           <div className="pay">{toPriceFormat(getDiscountTotalPrice())}원 결제하기</div>
         </div>

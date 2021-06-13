@@ -22,7 +22,7 @@ function Basket() {
     <StyledBasket>
       <header>
         <p>주문서</p>
-        <Link to="/">
+        <Link to="/menu">
           <AiOutlineClose className="close-icon" />
         </Link>
       </header>

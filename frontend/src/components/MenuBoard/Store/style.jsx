@@ -50,11 +50,10 @@ const Store = styled.div`
   }
 
   .pin {
-    font-size: 2rem;
-    color: #e93737;
     margin-top: -2rem;
     margin-left: -1rem;
     animation-duration: 3s;
+    padding: 2rem;
     /* animation: updown; */
   }
 

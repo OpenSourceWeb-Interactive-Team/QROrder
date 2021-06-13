@@ -11,11 +11,11 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={RestaurantMap} />
-        <Route exact path="/menu" component={MenuBoard} />
+        <Route exact path="/menu/:storeId" component={MenuBoard} />
         <Route exact path="/basket" component={Basket} />
         <Route exact path="/ordered" component={OrderReceived} />
         <Route exact path="/payment" component={Payment} />
-        <Route exact path="/qrcode" component={QRCode} />
+        <Route exact path="/qrcode/:storeId" component={QRCode} />
       </Switch>
     </BrowserRouter>
   )

@@ -1,20 +1,25 @@
-import { useState } from 'react'
 import ReactQRCode from 'qrcode.react'
 import { IoIosCall } from 'react-icons/io'
-
+import { useParams } from 'react-router-dom'
+import useStore from '../../hooks/useStore'
 import StyledQRCode from './style'
 
 function QRCode() {
+  const { storeId } = useParams('storeId')
+  const store = useStore(storeId)
+
+  if (!store) return <></>
+
   return (
     <StyledQRCode>
       <div className="box">
-        <div className="name">우리집 밥상</div>
+        <div className="name">{store.name}</div>
         <div className="number">
           <IoIosCall className="phone-icon" />
-          02-452-1424
+          {store.phone}
         </div>
         <div className="qrcode">
-          <ReactQRCode value="http://qrorder.jaryapp.kro.kr/menu/1"></ReactQRCode>
+          <ReactQRCode value={`http://qrorder.jaryapp.kro.kr/menu/${storeId}`}></ReactQRCode>
         </div>
         <div className="desc">
           <p className="info">{`< QROrder 사용방법 >`}</p>

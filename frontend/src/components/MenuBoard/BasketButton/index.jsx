@@ -17,7 +17,7 @@ function BasketButton() {
     plus.classList.add('add')
     plus.textContent = '+1'
     button.current.appendChild(plus)
-  }, [products])
+  }, [total, products])
 
   return (
     <StyledBasketButton ref={button}>

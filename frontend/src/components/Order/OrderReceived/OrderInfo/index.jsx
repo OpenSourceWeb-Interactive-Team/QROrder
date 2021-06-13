@@ -17,13 +17,9 @@ export default function OrderInfo() {
     if (discount.type === 'percent') {
       setTotalPrice(Number(price * (1 - discount.amount / 100)))
       return
-    } else if (discount.type === 'money') {
-      setTotalPrice(price - discount.amount)
-      return
-    } else {
-      setTotalPrice(price)
     }
-  }, [products])
+    setTotalPrice(price - discount.amount)
+  }, [discount.amount, discount.type, products])
 
   return (
     <StyledOrderInfo>

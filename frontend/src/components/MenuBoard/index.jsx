@@ -26,9 +26,9 @@ function MenuBoard() {
 
   return (
     <StyledMenuBoard>
-      <Store store={store}/>
-      <Carousell />
+      <Store store={store} />
       <Chart />
+      <Carousell store={store} />
       {store.menu.map(menuDetail => (
         <Menu key={menuDetail.name} menuDetail={menuDetail}></Menu>
       ))}

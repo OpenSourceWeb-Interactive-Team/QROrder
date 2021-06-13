@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 import GoogleMapReact from 'google-map-react'
 import API_KEY from './api.key.json'
 
-function Store() {
+function Store({ store }) {
   const center = {
-    lat: 36.634398969276475,
-    lng: 127.46114835398262,
+    lat: store.position[0],
+    lng: store.position[1],
   }
   const zoom = 16
 
@@ -20,15 +20,15 @@ function Store() {
 
   return (
     <StyledStore>
-      <div className="name">우리집밥상</div>
-      <Link to="/qrcode">
+      <div className="name">{store.name}</div>
+      <Link to={`/qrcode/${store.id}`}>
         <div className="qrcode">
           <AiOutlineQrcode />
         </div>
       </Link>
       <div className="number">
         <IoIosCall className="phone-icon" />
-        043-263-3999
+        {store.phone}
       </div>
       <div className="score">
         <AiFillStar className="star-icon" />
@@ -36,9 +36,9 @@ function Store() {
         <AiFillStar className="star-icon" />
         <AiFillStar className="star-icon" />
         <AiFillStar className="star-icon" />
-        <div className="number">4.8</div>
+        <div className="number">{store.star}</div>
       </div>
-      <div className="address">충청북도 청주시 서원구 사창동 258-4 1층</div>
+      <div className="address">{store.address}</div>
       <div className="position" style={{ height: '100px', width: '200px' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY.key }}

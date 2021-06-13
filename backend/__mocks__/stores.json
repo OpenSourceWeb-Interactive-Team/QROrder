@@ -5,7 +5,7 @@
     "phone": "043-263-3999",
     "address": "충청북도 청주시 서원구 사창동 258-4 1층",
     "position": [36.634398969276475, 127.46114835398262],
-    "icon": "meal",
+    "icon": "rice",
     "star": 4.8,
     "menu": [
       {
@@ -58,5 +58,526 @@
         "image": "https://cdn.crowdpic.net/list-thumb/thumb_l_E826FC66F9FEB8875E8079E523DD7F9D.jpg"
       }
     ]
+  },
+
+  {
+    "id": 2,
+    "name": "지지고 충북대점",
+    "phone": "043-277-8581",
+    "address": "충청북도 청주시 흥덕구 사창동 405-1",
+    "position": [36.63319579151551, 127.45803162417201],
+    "icon": "rice",
+    "star": 4.3,
+    "menu": [
+      {
+        "name": "지지고반반",
+        "price": 8000,
+        "score": 5,
+        "description": "1개 주문시 2컵",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20200306_94%2F1583457563265kjhce_JPEG%2Fimage.jpg"
+      },
+      {
+        "name": "지지고누들",
+        "price": 4000,
+        "score": 4.8,
+        "description": "해물맛의 볶음 우동",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20140317_88%2Fdandan_pr_1395037248423Q5BRV_JPEG%2F20140317_131103.jpg"
+      },
+      {
+        "name": "지지고라이스",
+        "price": 4000,
+        "score": 4.9,
+        "description": "해물맛의 볶음밥",
+        "tag": true,
+        "image": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F260F6B3454853BE612"
+      },
+      {
+        "name": "참치마요",
+        "price": 4000,
+        "score": 4.5,
+        "description": "참치마요는 참지 마세요.",
+        "tag": false,
+        "image": "https://mblogthumb-phinf.pstatic.net/MjAxODAyMjZfMjcx/MDAxNTE5NjQ4NTU1MjIy.rQX0KKiw0qm4KWhF2iTXtCFfOrLzDnHGphvi1rRXvsQg.pNqBxuYsJrBjetHF86g4OFVM4FZ7o72qZACi6Lbm8x4g.JPEG.juhye0329/KakaoTalk_Photo_2018-02-26-21-29-40_50.jpeg?type=w800"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "은화수식당 충북대점",
+    "phone": "043-268-7266",
+    "address": "충청북도 청주시 서원구 사창동 217-15번지 1층",
+    "position": [36.63257674139818, 127.45677974176641],
+    "icon": "rice",
+    "star": 4.4,
+    "menu": [
+      {
+        "name": "경양식돈가스",
+        "price": 7000,
+        "score": 4.8,
+        "description": "추억의 경양식 돈가스~",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190402_216%2F1554146382170QnpuT_JPEG%2FYKBo1efZKVF8vjx35lsrQYA0ruQwzQAjvriAkpLh8kXen98SX2n3k-RlhOOsrJD4.jpg&type=h166"
+      },
+      {
+        "name": "하와이돈가스",
+        "price": 7500,
+        "score": 4.8,
+        "description": "달달한 소스로 아이들, 남성분들이 좋아하는 돈가스!!",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190402_163%2F1554146381875035AA_JPEG%2F2injBTqsHn4H8Rb1FzDPF6k60hB60CO-5Cj7B6qTDLxEqrD_dh8IYdzUlj21MDCh.jpg&type=h166"
+      },
+      {
+        "name": "고구마매콤이돈가스",
+        "price": 9000,
+        "score": 4.9,
+        "description": "매콤함에 달달함을 동시에 맛볼 수 있는 돈가스",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190402_129%2F155414638303921Vo6_JPEG%2FpoOVwO13OA7hGHqIxaReH4PqrtTTfeiFXYeHVgXvsjrhlxDwqd4ip7PXql4Fwr-J.jpg&type=h166"
+      },
+      {
+        "name": "은화수 정식",
+        "price": 10000,
+        "score": 4.8,
+        "description": "돈가스도 먹고 함박스테이끼까지!!",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190402_170%2F1554146382394fR93M_JPEG%2FF6zgFU2g8n6iRMoEXektixj370NWZr5llIB2AAxk_LI%253D.jpg&type=h166"
+      },
+      {
+        "name": "치즈 돈가스",
+        "price": 8500,
+        "score": 4.7,
+        "description": "치즈가 쭉쭉!!",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190402_273%2F15541463833110DWSa_JPEG%2FaPqMIOFNPqlw5-2L9EOZ29VlRsdMPFCaU3S3G-NMhuc%253D.jpg&type=h166"
+      },
+      {
+        "name": "매콤이 돈가스",
+        "price": 7500,
+        "score": 4.6,
+        "description": "신라면보다 맵고 불닭보다 안매운 맛있게 매운 맛!",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190402_184%2F1554146381936c6rdn_JPEG%2Fu7H33lBVZMarSJvwNUvUZ4rlcFnUhFogh4DiDXv-Z489jvMqInetqroilleJeV-s.jpg&type=h166"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "샐럽 충북대점",
+    "phone": "043-272-8277",
+    "address": "충청북도 청주시 서원구 KR 사창동 386-9번지 1층 청주시 충청북도 KR",
+    "position": [36.6318906499049, 127.4565377079521],
+    "icon": "rice",
+    "star": 4.4,
+    "menu": [
+      {
+        "name": "목살스테이크 포케(참깨된장드레싱)",
+        "price": 8900,
+        "score": 4.8,
+        "description": "목살,옥수수,병아리콩,방울토마토,할라피뇨,구운양파,파인애플,튀긴양파,김 446kcal",
+        "tag": true,
+        "image": "https://naverbooking-phinf.pstatic.net/20210418_108/1618723308289EKNPr_JPEG/image.jpg?type=w1500_60_sharpen"
+      },
+      {
+        "name": "달콤간장 연어 포케",
+        "price": 8900,
+        "score": 4.9,
+        "description": "연어,병아리콩,양파,방울토마토,날치알,해초,튀긴양파,김 196kcal",
+        "tag": true,
+        "image": "https://naverbooking-phinf.pstatic.net/20201208_207/16074206600291N7Lv_JPEG/image.jpg?type=w1500_60_sharpen"
+      },
+      {
+        "name": "두부버섯 포케(오리엔탈드레싱)",
+        "price": 8500,
+        "score": 4.9,
+        "description": "두부,버섯,옥수수,양파,병아리콩,방울토마토,튀긴양파,김 235kcal",
+        "tag": true,
+        "image": "https://naverbooking-phinf.pstatic.net/20201126_36/1606365141422BOCbx_JPEG/image.jpg?type=w1500_60_sharpen"
+      },
+      {
+        "name": "스파이시크림 연어 포케",
+        "price": 9400,
+        "score": 4.8,
+        "description": "연어,병아리콩,양파,방울토마토,날치알,해초,투긴양파,김 348kcal",
+        "tag": true,
+        "image": "https://naverbooking-phinf.pstatic.net/20201229_46/16091704254450ALzh_JPEG/image.jpg?type=w1500_60_sharpen"
+      },
+      {
+        "name": "닭가슴살 에그 포케(참깨유자드레싱)",
+        "price": 7800,
+        "score": 4.7,
+        "description": "닭가슴살,계란,옥수수,병아리콩,방울토마토,튀긴양파,김 291kcal",
+        "tag": false,
+        "image": "https://naverbooking-phinf.pstatic.net/20210310_251/1615349118856UBdWy_JPEG/image.jpg?type=w1500_60_sharpen"
+      },
+      {
+        "name": "아보카도 에그 포케(참깨된장 드레싱)",
+        "price": 8500,
+        "score": 4.8,
+        "description": "아보카도,계란,옥수수,병아리콩,방울토마토,튀긴양파,김 437kcal",
+        "tag": false,
+        "image": "https://naverbooking-phinf.pstatic.net/20210129_280/1611908292744s0h1g_JPEG/image.jpg?type=w1500_60_sharpen"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "햇살왕만두",
+    "phone": "043-264-7050",
+    "address": "충청북도 청주시 흥덕구 복대2동 사직대로82번길 14",
+    "position": [36.63396556813718, 127.45606563919762],
+    "icon": "rice",
+    "star": 4.8,
+    "menu": [
+      {
+        "name": "만두전골",
+        "price": 8000,
+        "score": 4.8,
+        "description": "뜨끈한 국물에 만두 한 입..",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAzMjlfMTI0%2FMDAxNjE3MDE2NTY3NDg2.DeT_R3bjhNK1qA7gUJp4D0ej-oQKgqQXOHSui2dIGRgg.72UvzyPUqzpCGDd9On6x0wteZD57fDMqO5hhw2qln9Ig.JPEG.okcjhh%2Foutput_2520842880.jpg"
+      },
+      {
+        "name": "왕만두국",
+        "price": 7000,
+        "score": 4.8,
+        "description": "뜨끈한 왕만두국",
+        "tag": true,
+        "image": "https://lh3.googleusercontent.com/proxy/6lrdobpCvyF1CTf62La9wqzhEbtnpPt6xO5sAS2ooWv01ze4d18NVAhRftFbSFCc8yoMDj0s_xbmlpPqK-xz3YJtEV5dct3o"
+      },
+      {
+        "name": "왕만두",
+        "price": 6000,
+        "score": 4.7,
+        "description": "묻지도 따지지도 말고 왕만두",
+        "tag": false,
+        "image": "https://mblogthumb-phinf.pstatic.net/MjAxNzAzMTVfNzAg/MDAxNDg5NTUyMzQxODEw.pUXX-oxSii6dCtBXXsDNSexH3NPijyEf1Kb-d5dDhf8g.Ovk3e7ZR0v6bsmkdBOllHs9mbyMxjnoB6Y9Y6CtgvT4g.JPEG.pinkim071/image_7195504891489552093908.jpg?type=w800"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "바른치킨충북대점",
+    "phone": "043-263-5841",
+    "address": "충청북도 청주시 서원구 사창동 150-24",
+    "position": [36.63375893978952, 127.45719216685747],
+    "icon": "chicken",
+    "star": 4.1,
+    "menu": [
+      {
+        "name": "대새레드",
+        "price": 21900,
+        "score": 4.6,
+        "description": "탱글한 랍스터 새우와 72시간 숙성된 소스의 뒤끝있는 매운맛!",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MDVfMjAg%2FMDAxNjIwMjA1NTQ4Njgy.-WUhzgAyga3yys7dkWkSxarBJY94wcPUGs8DwaALcTgg.oX5hQ4lDteFv6hzvW30eB-4QHpOlapRbR1Hd_iUtQZsg.JPEG.sjrkchlrhek%2F20210429_040725.jpg"
+      },
+      {
+        "name": "대새핫블랙",
+        "price": 21900,
+        "score": 4.7,
+        "description": "랍스터 새우와 매운 간장 소스로 맛을 낸 스페셜 메뉴",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20210429_115%2F16196810394135dS7o_PNG%2Fimage.png&type=h166"
+      },
+      {
+        "name": "현미바사삭",
+        "price": 16900,
+        "score": 4.7,
+        "description": "특허받은 현미파우더에 깨끗한 기름으로 조리하여 후라이드 본연의 깔끔하고 고소한 치킨",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20210429_18%2F1619681052277NlMco_PNG%2Fimage.png&type=h166"
+      },
+      {
+        "name": "양념치킨",
+        "price": 17900,
+        "score": 4.7,
+        "description": "매콤달콤한 양념과 현미 파우더의 고소함이 잘 어우러진 바른치킨만의 특제 양념 치킨",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20210429_241%2F1619681084277x543w_PNG%2Fimage.png&type=h166"
+      },
+      {
+        "name": "꿀마늘치킨",
+        "price": 18900,
+        "score": 4.8,
+        "description": "알싸한 마늘 토핑과 달콤한 꿀 소스의 조화가 인상적인 치킨",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20210429_111%2F16196810986751SPGM_PNG%2Fimage.png&type=h166"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "모퉁이 파스타",
+    "phone": "043-266-8648",
+    "address": "충청북도 청주시 흥덕구 사창동 507",
+    "position": [36.6317857443674, 127.46012754377054],
+    "icon": "pizza",
+    "star": 4.5,
+    "menu": [
+      {
+        "name": "토마토양송이 스파게티",
+        "price": 4000,
+        "score": 4.8,
+        "description": "토마토와 양송이로 맛을 낸 파스타",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjBfMTU5%2FMDAxNjEzNzk1Njg4MjIw.3FTyMCCFFnfGYMnxW07Lr5B6Zph5C2Yf4F4WQci-f2Yg._ZNmtb1q5Wxs11DEMOLQvGpHAmky19EGZV6GI_6XOFUg.JPEG.dusgmlblog%2FIMG_1221.jpg"
+      },
+      {
+        "name": "알리오올리오 스파게티",
+        "price": 5000,
+        "score": 4.8,
+        "description": "마늘과 오일로 맛을 낸 파스타",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210329_85%2F16169480299194HUe3_JPEG%2Fupload_44965b7e99fa23842a0aa33f3e010194.jpeg"
+      },
+      {
+        "name": "크림양송이 스파게티",
+        "price": 5000,
+        "score": 4.7,
+        "description": "크림과 양송이로 맛을 낸 파스타",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210329_260%2F1616948029847PJKXJ_JPEG%2Fupload_5df4e939624b9d18e5476f289a56cac2.jpeg"
+      },
+      {
+        "name": "까르보나라 스파게티",
+        "price": 5500,
+        "score": 4.9,
+        "description": "크림과 베이컨으로 맛을 낸 파스타",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODExMjVfODIg%2FMDAxNTQzMTI0OTc3NTEy.-ggqPywwJNXjbO9FNvghCgh6xT8PeSlHptOq10cFsA8g.KBiW69Gf0Wc8_23T5e43t5J2INHj8hoh8TdIUaMcv4wg.JPEG.jelly_dear%2FKakaoTalk_20181124_213047754.jpg"
+      },
+      {
+        "name": "치킨도리아",
+        "price": 5500,
+        "score": 4.8,
+        "description": "매콤한 맛을 베이스로 치킨과 치즈로 맛을 낸 도리아",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjdfMjQ0%2FMDAxNjExNzQ5MDMwODYw.Wb5YspWlii81vtPQRA2CZoOA_BH80a6famQcWDqd2sAg.vYdObuHU9Nu_HTjjG0E1a4DklWn62JbbfvYPco7G0bQg.JPEG.lsy960423%2FIMG_3918.jpg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "파브리카",
+    "phone": "0507-1405-8068",
+    "address": "충북 청주시 서원구 1순환로 682 메가박스 충북대점 2층",
+    "position": [36.6326920247714, 127.46050992104652],
+    "icon": "pizza",
+    "star": 4.6,
+    "menu": [
+      {
+        "name": "갈릭 통삼겹 스테이크",
+        "price": 27000,
+        "score": 4.8,
+        "description": "두툼한 통삼겹에 구운마늘과 치미츄리 소스를 곁들인 돼지고기 스테이크(2인분)",
+        "tag": true,
+        "image": "https://ldb-phinf.pstatic.net/20200601_182/1591001610887rfUO3_JPEG/4Uo1tO8KqRsfmIRFQ_BwmaaK7KVIZx8LfYO63dthYwEhRUQm-TjTQvZCZqPBfFkV.jpg"
+      },
+      {
+        "name": "빠네파스타",
+        "price": 17000,
+        "score": 4.7,
+        "description": "베스트메뉴!!! 베이컨, 버섯, 양파, 마늘로 맛을 낸 파스타를 버터로 구운 빵에 넣은 갈릭크림 파스타",
+        "tag": true,
+        "image": "https://ldb-phinf.pstatic.net/20200406_115/15861656577395nz7m_JPEG/4Uo1tO8KqRsfmIRFQ_BwmcTYHtVR8jwtnsOl5rZzD9fYCGePf4l6vVcbHOblHbeE.jpg"
+      },
+      {
+        "name": "빼쉐크레마",
+        "price": 17000,
+        "score": 4.8,
+        "description": "강츄!! 매콤 담백 칼칼한 맛이 일품인 해산물 크림 스튜파스타",
+        "tag": false,
+        "image": "https://ldb-phinf.pstatic.net/20200601_172/15910016109517iPTh_JPEG/4Uo1tO8KqRsfmIRFQ_BwmSpKY9bWRBl6c5T21oSlz6bf8a7Vs2ObczHeb2cPWwke.jpg"
+      },
+      {
+        "name": "브라질리언 스테이크 샐러드",
+        "price": 23000,
+        "score": 4.7,
+        "description": "소고기와 각종 채소, 버섯, 파인애플 등을 꼬지에 꽂은 그릴 샐러드(안심, 토시살)",
+        "tag": false,
+        "image": "https://ldb-phinf.pstatic.net/20200601_47/1591001610941ReWdb_JPEG/4Uo1tO8KqRsfmIRFQ_BwmQCO9czz0Ohgeo-lH0UifzrDVMuHBfKedesANVAACCWn.jpg"
+      },
+      {
+        "name": "고르곤졸라피자",
+        "price": 15000,
+        "score": 4.7,
+        "description": "꿀과 함께 곁들여 먹는 고르곤졸라 치즈의 담백한 피자",
+        "tag": false,
+        "image": "https://ldb-phinf.pstatic.net/20200406_172/1586165658064Tbd3o_JPEG/4Uo1tO8KqRsfmIRFQ_BwmaUkXGnsRDdUJyx-MG63PdeyQSp8-ML9DrVPvd5M5Cas.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "왕천파닭 충대점",
+    "phone": "043-263-4088",
+    "address": "충청북도 청주시 흥덕구 사창동 155-6",
+    "position": [36.6341192163963, 127.45918493932272],
+    "icon": "chicken",
+    "star": 4.6,
+    "menu": [
+      {
+        "name": "왕천파닭",
+        "price": 19000,
+        "score": 4.7,
+        "description": "기본 메뉴!",
+        "tag": true,
+        "image": "https://ldb-phinf.pstatic.net/20200717_251/15949725664869PStk_JPEG/gC5Fm7lF00oVn6yQzJVfXBoVuW6ZZsQU6talg40AgTX8dOR5lQuxO8UBaRDQVWwI.jpg"
+      },
+      {
+        "name": "순살파닭",
+        "price": 19000,
+        "score": 4.8,
+        "description": "명불허전 베스트메뉴!!!",
+        "tag": true,
+        "image": "https://ldb-phinf.pstatic.net/20200717_251/15949725664869PStk_JPEG/gC5Fm7lF00oVn6yQzJVfXBoVuW6ZZsQU6talg40AgTX8dOR5lQuxO8UBaRDQVWwI.jpg"
+      },
+      {
+        "name": "다리만파닭",
+        "price": 20000,
+        "score": 4.8,
+        "description": "닭다리만 있는 파닭!!",
+        "tag": false,
+        "image": "https://ldb-phinf.pstatic.net/20200720_152/1595210424835ysqb0_JPEG/KswUBIx9zs30O_STr_ccYMJ0Ekhou7E1UHLDEk3a97ODl2oqAPexw5GYIKEG9Jab.jpg"
+      },
+      {
+        "name": "똥집 튀김",
+        "price": 10000,
+        "score": 4.7,
+        "description": "닭똥집 튀김, 고소해요!",
+        "tag": false,
+        "image": "http://gdimg.gmarket.co.kr/1607690589/still/600?ver=1557733943"
+      },
+      {
+        "name": "사이다(500ml)",
+        "price": 2000,
+        "score": 4.7,
+        "description": "우리가 아는 사이다",
+        "tag": false,
+        "image": "http://img.danawa.com/prod_img/500000/479/250/img/1250479_1.jpg?shrink=500:500&_v=20170420120423"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "중문탕수육",
+    "phone": "043-266-4098",
+    "address": "충북 청주시 서원구 1순환로674번길 72",
+    "position": [36.63191413632094, 127.45706363594097],
+    "icon": "chicken",
+    "star": 4.4,
+    "menu": [
+      {
+        "name": "탕수육 소",
+        "price": 2000,
+        "score": 4.8,
+        "description": "값싸고 바삭한 탕수육",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTExMTBfMTAy%2FMDAxNTczMzg4OTUwNTMz.ZEf7HBFoFMMHfDyUdIKx4njZryqlDbzuGdDjaAnIBJEg._81h31GqXGqze5i4spJvwBLin97WPHDRLZubDptJzFkg.JPEG.tjrwhdxo92%2F1573388950878.jpg"
+      },
+      {
+        "name": "순대 소",
+        "price": 2000,
+        "score": 4.7,
+        "description": "우리가 아는 순대",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAxMThfMjk4%2FMDAxNTQ3ODAwMTU4OTY5.VSbO4EEuP0O3rV5UnbAldS-8VMWHyQL60yx2kJse-2Eg.TWPaKZnOag13qm8dl5oeNrO_gBhP-aDwPEtsgtiRE80g.JPEG.ksh1372%2FIMG_1722.jpg"
+      },
+      {
+        "name": "떡볶이 소",
+        "price": 2000,
+        "score": 4.6,
+        "description": "쫀득한 떡볶이",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTExMTBfMTkg%2FMDAxNTczMzg4OTQ3OTQy.UwnTrD-WdEs1YptsdfLbXEI2cE5yl3HRzemLqgai-Ngg.bKmkoE21MqztmAibpfJk5NBLwXBTeQ_lNFr3P0xCifAg.JPEG.tjrwhdxo92%2F1573388948279.jpg"
+      },
+      {
+        "name": "탕수육 중",
+        "price": 3000,
+        "score": 4.8,
+        "description": "값싸고 바삭한 탕수육",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTExMTBfMTAy%2FMDAxNTczMzg4OTUwNTMz.ZEf7HBFoFMMHfDyUdIKx4njZryqlDbzuGdDjaAnIBJEg._81h31GqXGqze5i4spJvwBLin97WPHDRLZubDptJzFkg.JPEG.tjrwhdxo92%2F1573388950878.jpg"
+      },
+      {
+        "name": "순대 중",
+        "price": 3000,
+        "score": 4.7,
+        "description": "우리가 아는 순대",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAxMThfMjk4%2FMDAxNTQ3ODAwMTU4OTY5.VSbO4EEuP0O3rV5UnbAldS-8VMWHyQL60yx2kJse-2Eg.TWPaKZnOag13qm8dl5oeNrO_gBhP-aDwPEtsgtiRE80g.JPEG.ksh1372%2FIMG_1722.jpg"
+      },
+      {
+        "name": "떡볶이 중",
+        "price": 3000,
+        "score": 4.6,
+        "description": "쫀득한 떡볶이",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTExMTBfMTkg%2FMDAxNTczMzg4OTQ3OTQy.UwnTrD-WdEs1YptsdfLbXEI2cE5yl3HRzemLqgai-Ngg.bKmkoE21MqztmAibpfJk5NBLwXBTeQ_lNFr3P0xCifAg.JPEG.tjrwhdxo92%2F1573388948279.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "북경깐풍기",
+    "phone": "0507-1381-0161",
+    "address": "충북 청주시 서원구 내수동로108번길 40 1층",
+    "position": [36.632620606613315, 127.45796177787972],
+    "icon": "chicken",
+    "star": 4.6,
+    "menu": [
+      {
+        "name": "북경깐풍기",
+        "price": 17000,
+        "score": 4.7,
+        "description": "대표메뉴",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210502_32%2F1619948319711ue1fj_JPEG%2Fupload_140d6bfbc1b3253cc286095a4e66a81c.jpg"
+      },
+      {
+        "name": "치즈깐풍기",
+        "price": 19000,
+        "score": 4.8,
+        "description": "달짝지근 깐풍기에 치즈가 좌르르",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20200406_189%2F1586126169135R5RhS_JPEG%2Fupload_c4ca70593cd3b438b50cadfcc2781a57.jpeg"
+      },
+      {
+        "name": "갈릭깐풍기",
+        "price": 17000,
+        "score": 4.6,
+        "description": "마늘 맛을 더한 갈릭깐풍기",
+        "tag": true,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MDRfMTUz%2FMDAxNjIyNzc3MDA5MDQ0.1qL8w0ZHE_yCKobwYgjjt2Sd1zNj-0p6sgtr1UIi7XEg.UmN1Jckcra8BtzFDkiGEvQZe0e0UeLCGfR2_I14tlF4g.JPEG.ikeepeating%2FIMG_6551.JPG"
+      },
+      {
+        "name": "광동깐풍기",
+        "price": 17000,
+        "score": 4.8,
+        "description": "광동식 깐풍기",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MDRfNzQg%2FMDAxNjIyNzc2OTI5OTc4.5845dPyUzuG_HcPNTgfP6ezpz9IVYo8nDg1a847dsf0g.XfzQFhZ5gk3LC4uPPJO6tuR2FXP1bC2V4FVF2JBcxsQg.JPEG.ikeepeating%2FIMG_6550.JPG"
+      },
+      {
+        "name": "떡볶이",
+        "price": 5000,
+        "score": 4.7,
+        "description": "쫀득한 떡볶이",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA2MjRfOTEg%2FMDAxNTkyOTcxNDA4MTEy.EdwEy3luC5sO-hw4TPzqi-KNLOhFJ3AMgCU-LnoHT0gg.d6qBqMbYS4L5m5Rh6yOeWNdbbZYWGl8kEqlQAXGYk-Yg.JPEG.hanjw0316%2F1592971406940.jpg"
+      },
+      {
+        "name": "주먹밥",
+        "price": 3000,
+        "score": 4.6,
+        "description": "고소한 주먹밥",
+        "tag": false,
+        "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMTBfMjQ3%2FMDAxNjA1MDE0MDY4MDM1.9o1tg9mo6Sdqng_uZvRYhM1tXGs0NooXczhxyOX_Hv0g.nH1bMpKBo7aZpGZv4SzZyuEO55Gqbz4-RAirsqLppgYg.JPEG.minha9305%2F1605011726337.jpg"
+      }
+    ]
   }
+
 ]

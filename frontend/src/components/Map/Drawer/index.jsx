@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Drawer({ restaurant }) {
   return (
-    <Link to="/menu">
+    <Link to={`/menu/${restaurant.id}`}>
       <StyledDrawer>
         <picture>
           <img

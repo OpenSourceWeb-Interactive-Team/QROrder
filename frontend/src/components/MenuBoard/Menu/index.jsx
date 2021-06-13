@@ -1,27 +1,46 @@
+import { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { AiOutlineShoppingCart, AiFillStar } from 'react-icons/ai'
-import StyledMenu from './style'
 
-function Menu() {
+import StyledMenu from './style'
+import { toPriceFormat } from '../../../utils/format'
+import { plus, getInitProduct } from '../../../modules/basket'
+
+function Menu({ menuDetail }) {
+  const { name, price, score, description, tag, image } = menuDetail
+
+  const [quantity, setQuantity] = useState(0)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getInitProduct({ name, quantity, price }))
+  }, [dispatch, name, price])
+
+  const itemPlus = () => {
+    setQuantity(quantity + 1)
+    dispatch(plus({ name }))
+  }
+
   return (
     <StyledMenu>
-      <div className="image"></div>
+      <picture className="image">
+        <img src={image} alt={name} style={{ objectFit: 'cover', loading: 'lazy' }} />
+      </picture>
       <div className="contents">
         <div className="name">
-          베트남 볶음밥
-          <div className="tag">대표</div>
+          {name}
+          {tag && <div className="tag">대표</div>}
         </div>
         <div className="info">
-          <div className="price">11,900원</div>
+          <div className="price">{toPriceFormat(price)}원</div>
           <div className="score">
             <AiFillStar className="star" />
-            <div>4.3</div>
+            <div>{Number.parseFloat(score).toFixed(1)}</div>
           </div>
         </div>
-        <div className="desc">
-          돼지고기에ㅁㄴㄹㅁㄹㅁㄴㄹㅁㄹㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㄴㅁㄹㄴ돼지고기에ㅁㄴㄹㅁㄹㅁㄴㄹㅁㄹㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㄴㅁㄹㄴㅁㄹㅁㄴㅁㄹㅁㄴ
-        </div>
+        <div className="desc">{description}</div>
       </div>
-      <div className="shop">
+      <div className="shop" onClick={itemPlus}>
         <AiOutlineShoppingCart />
       </div>
     </StyledMenu>

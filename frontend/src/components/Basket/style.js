@@ -114,6 +114,7 @@ const Basket = styled.div`
         font-weight: 700;
         padding-top: 2rem;
         font-size: 1.2rem;
+        margin-bottom: 5rem;
         p {
           margin-left: auto;
           font-size: 1.2rem;

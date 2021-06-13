@@ -8,7 +8,6 @@ const Store = styled.div`
   margin: 20px 10px;
   position: relative;
 
-  /* text-align: center; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
 

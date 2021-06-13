@@ -1,26 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { RiCoupon2Line } from 'react-icons/ri'
+import { discountCash } from '../../modules/basket'
+import { AiOutlineClose } from 'react-icons/ai'
+
 import { toPriceFormat } from '../../utils/format'
 import StyledPayment from './style'
-
-const order = {
-  type: '포장',
-  store: '초밥천국',
-  basket: [
-    {
-      id: 1,
-      name: '우동',
-      count: 2,
-      price: 3000,
-    },
-    {
-      id: 2,
-      name: '초밥',
-      count: 1,
-      price: 8000,
-    },
-  ],
-}
 
 const customer = {
   nickname: '제리',
@@ -49,16 +35,16 @@ const coupons = [
 function Payment() {
   const [discount, setDiscount] = useState({
     select: false,
-    coupon_number: 1,
+    coupon_number: 0,
   })
-
-  function getTotalPrice() {
-    const totalPrice = order.basket.reduce((prev, cur) => {
-      return prev + cur.price * cur.count
-    }, 0)
-
-    return totalPrice
-  }
+  const [totalPrice, setTotalPrice] = useState(0)
+  const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
+  const dispatch = useDispatch()
+  useEffect(() => {
+    let price = 0
+    products.map(product => (price += product.price * product.quantity))
+    setTotalPrice(price)
+  }, [products])
 
   function getCoupon(number) {
     const coupon = coupons.find(coupon => coupon.number === number)
@@ -66,7 +52,6 @@ function Payment() {
   }
 
   function getDiscountTotalPrice() {
-    const totalPrice = getTotalPrice()
     if (discount.select === false) return totalPrice
 
     const coupon = getCoupon(discount.coupon_number)
@@ -93,16 +78,21 @@ function Payment() {
 
   return (
     <StyledPayment>
+      <header>
+        <p>결제하기</p>
+        <Link to="/basket">
+          <AiOutlineClose className="close-icon" />
+        </Link>
+      </header>
       <div className="box order">
         <div className="title">주문 정보</div>
-        <div className="type">포장</div>
-        <div className="store">초밥천국</div>
+        <div className="store">우리집밥상</div>
         <div className="menu-list">
-          {order.basket.map(menu => (
-            <div className="menu" key={menu.id}>
-              <div className="name">{menu.name}</div>
-              <div className="count">{menu.count}</div>
-              <div className="price">{toPriceFormat(menu.count * menu.price)}</div>
+          {products.map(product => (
+            <div className="menu" key={product.name}>
+              <div className="name">{product.name}</div>
+              <div className="count">{product.quantity}</div>
+              <div className="price">{toPriceFormat(product.quantity * product.price)}</div>
             </div>
           ))}
         </div>
@@ -115,7 +105,7 @@ function Payment() {
         <input type="text" placeholder="예) 브로콜리 빼주세요" />
       </div>
       <div className="box">
-        <div className="title">결제수단</div>
+        <div className="title-none">결제수단</div>
         <div className="select">
           <div>
             <input type="radio" name="payment" value="credit" />
@@ -132,33 +122,49 @@ function Payment() {
         </div>
       </div>
       <div className="box discount">
-        <div className="title">할인쿠폰</div>
+        <div className="title-none">할인쿠폰</div>
         <div className="coupon-list">
-          <div className={discount.coupon_number === 1 ? 'coupon select' : 'coupon'} onClick={() => selectCoupon(1)}>
+          <div
+            className={discount.coupon_number === 1 && discount.select ? 'coupon select' : 'coupon'}
+            onClick={() => {
+              selectCoupon(1)
+              dispatch(discountCash({ type: 'percent', amount: 10 }))
+            }}>
             <RiCoupon2Line className="icon" />
             <div className="name">10% 할인 쿠폰</div>
           </div>
-          <div className={discount.coupon_number === 2 ? 'coupon select' : 'coupon'} onClick={() => selectCoupon(2)}>
+          <div
+            className={discount.coupon_number === 2 && discount.select ? 'coupon select' : 'coupon'}
+            onClick={() => {
+              selectCoupon(2)
+              dispatch(discountCash({ type: 'percent', amount: 15 }))
+            }}>
             <RiCoupon2Line className="icon" />
             <div className="name">15% 할인 쿠폰</div>
           </div>
-          <div className={discount.coupon_number === 3 ? 'coupon select' : 'coupon'} onClick={() => selectCoupon(3)}>
+          <div
+            className={discount.coupon_number === 3 && discount.select ? 'coupon select' : 'coupon'}
+            onClick={() => {
+              selectCoupon(3)
+              dispatch(discountCash({ type: 'money', amount: 5000 }))
+            }}>
             <RiCoupon2Line className="icon" />
             <div className="name">5000원 할인 쿠폰</div>
           </div>
         </div>
       </div>
       <div className="box total">
-        <div className="title">결제금액</div>
+        <div className="title-none">결제금액</div>
         <div className="total-price">
-          <div className={discount.select ? 'original line' : 'original'}>{toPriceFormat(getTotalPrice())}</div>
+          <div className={discount.select ? 'original line' : 'original'}>{toPriceFormat(totalPrice)}</div>
           {discount.select && <div className="discount">{toPriceFormat(getDiscountTotalPrice())}</div>}
         </div>
       </div>
-
-      <div className="bottom">
-        <div className="pay">{toPriceFormat(getDiscountTotalPrice())}원 결제하기</div>
-      </div>
+      <Link to="ordered">
+        <div className="bottom">
+          <div className="pay">{toPriceFormat(getDiscountTotalPrice())}원 결제하기</div>
+        </div>
+      </Link>
     </StyledPayment>
   )
 }

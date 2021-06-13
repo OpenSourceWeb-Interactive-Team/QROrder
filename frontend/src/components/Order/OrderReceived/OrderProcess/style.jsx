@@ -26,7 +26,7 @@ const OrderProcess = styled.div`
             margin: 10px;
         }
     }
-}
+  }
 `
 
 export default OrderProcess

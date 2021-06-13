@@ -5,6 +5,24 @@ const Payment = styled.div`
   min-height: 100vh;
   overflow: hidden;
 
+  header {
+    display: flex;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    font-size: 1.3rem;
+
+    p {
+      margin: 0 auto;
+    }
+    .close-icon {
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
   .box {
     background-color: white;
     padding: 20px 15px;
@@ -12,6 +30,16 @@ const Payment = styled.div`
 
     & > .title {
       font-size: 1.2rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid black;
+      font-weight: 600;
+    }
+
+    & > .title-none {
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+      font-weight: 600;
     }
 
     input[type='text'] {
@@ -32,24 +60,25 @@ const Payment = styled.div`
 
     &.order {
       .type {
+        display: flex;
         margin: 5px 0px;
       }
       .store {
-        margin: 5px 0px;
+        margin: 0.5rem 0px;
       }
 
       .menu-list {
         font-size: 0.85rem;
-        color: #504949;
+        color: gray;
 
         .menu {
           display: flex;
-          margin: 2px 0px;
+          margin: 5px 0px;
           .count {
             margin-left: 3px;
           }
-          .count:before {
-            content: 'x';
+          .count:after {
+            content: '개';
           }
           .price {
             margin-left: auto;
@@ -62,16 +91,15 @@ const Payment = styled.div`
     }
 
     &.customer {
+      font-size: 1rem;
       .nickname {
         margin: 8px 0px;
       }
       .phone {
         margin: 8px 0px;
-        font-size: 1.1rem;
       }
 
       .require {
-        font-size: 0.9rem;
         color: #7a7a7a;
         margin-top: 10px;
         margin-bottom: 3px;
@@ -88,6 +116,7 @@ const Payment = styled.div`
     &.total {
       .total-price {
         margin-top: 10px;
+        margin-bottom: 3rem;
         font-size: 1.2rem;
         display: flex;
         .line {

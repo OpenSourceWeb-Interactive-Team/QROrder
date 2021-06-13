@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { FiPlusSquare, FiMinusSquare } from 'react-icons/fi'
-import { plus, minus, getInitProduct } from '../../../modules/basket'
+import { plus, minus } from '../../../modules/basket'
+import { toPriceFormat } from '../../../utils/format'
 
-function Product({ name, price }) {
-  const [quantity, setQuantity] = useState(1)
+function Product(props) {
+  const { name, price } = props
+  const [quantity, setQuantity] = useState(props.quantity)
   const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getInitProduct({ name, quantity, price }))
-  }, [])
 
   const itemPlus = () => {
     setQuantity(quantity + 1)
@@ -30,7 +28,7 @@ function Product({ name, price }) {
           <p>{quantity}</p>
           <FiPlusSquare className="plus-icon" onClick={itemPlus} />
         </div>
-        <p className="price">{price * quantity}원</p>
+        <p className="price">{toPriceFormat(price * quantity)}원</p>
       </div>
     </div>
   )

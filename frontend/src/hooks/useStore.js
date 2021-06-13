@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function useStore(storeId) {
+function useStore(storeId = '') {
   const [store, setStore] = useState(null)
 
   useEffect(() => {

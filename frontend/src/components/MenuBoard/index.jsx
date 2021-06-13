@@ -21,8 +21,6 @@ function MenuBoard() {
     setQuantity(totalQuantity)
   }, [products])
 
-  console.log(store)
-
   if (!store) return <></>
 
   return (

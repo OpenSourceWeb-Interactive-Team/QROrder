@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const RestaurantMap = styled.div`
-  .base-pin {
+  .pin {
     font-size: 2rem;
     color: #e93737;
     margin-top: -2rem;

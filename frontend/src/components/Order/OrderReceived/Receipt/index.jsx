@@ -23,7 +23,9 @@ export default function Receipt() {
     } else if (discount.type === 'money') {
       setDiscountAmount(discount.amount)
       setTotalPrice(price - discountAmount)
+      return
     }
+    setTotalPrice(price)
   }, [products])
 
   return (
@@ -38,7 +40,7 @@ export default function Receipt() {
           {products.map(product => (
             <MenuInfo product={product} />
           ))}
-          {discount.type && (
+          {discount.amount !== 0 && (
             <div className="discount">
               <p className="title">할인금액</p>
               <p className="amount">{toPriceFormat(discountAmount)}원</p>

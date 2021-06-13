@@ -17,7 +17,7 @@ export default function OrderInfo() {
       return
     }
     setTotalPrice(price - discount.amount)
-  }, [products])
+  }, [discount.amount, discount.type, products])
 
   return (
     <StyledOrderInfo>

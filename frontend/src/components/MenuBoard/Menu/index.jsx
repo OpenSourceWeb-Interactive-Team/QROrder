@@ -14,7 +14,7 @@ function Menu({ menuDetail }) {
 
   useEffect(() => {
     dispatch(getInitProduct({ name, quantity, price }))
-  }, [])
+  }, [dispatch, name, price, quantity])
 
   const itemPlus = () => {
     setQuantity(quantity + 1)

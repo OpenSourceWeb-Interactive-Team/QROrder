@@ -33,7 +33,7 @@ export const discountCash = ({ type, amount }) => ({
 const initialState = {
   means: true,
   product: [],
-  discount: {},
+  discount: { type: 'money', amount: 0 },
 }
 
 export default function reducer(state = initialState, action) {

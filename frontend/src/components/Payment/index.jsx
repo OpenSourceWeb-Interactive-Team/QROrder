@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { RiCoupon2Line } from 'react-icons/ri'
-import { IoBagHandleOutline } from 'react-icons/io5'
-import { GiForkKnifeSpoon } from 'react-icons/gi'
 import { discountCash } from '../../modules/basket'
+import { AiOutlineClose } from 'react-icons/ai'
 
 import { toPriceFormat } from '../../utils/format'
 import StyledPayment from './style'
@@ -38,9 +37,7 @@ function Payment() {
     select: false,
     coupon_number: 0,
   })
-
   const [totalPrice, setTotalPrice] = useState(0)
-  const means = useSelector(state => state.basket.means)
   const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
   const dispatch = useDispatch()
   useEffect(() => {
@@ -81,21 +78,14 @@ function Payment() {
 
   return (
     <StyledPayment>
+      <header>
+        <p>결제하기</p>
+        <Link to="/basket">
+          <AiOutlineClose className="close-icon" />
+        </Link>
+      </header>
       <div className="box order">
         <div className="title">주문 정보</div>
-        <div className="type">
-          {means ? (
-            <>
-              <p>먹고갈게요</p>
-              <GiForkKnifeSpoon className="fork-icon" />
-            </>
-          ) : (
-            <>
-              <p>포장할게요</p>
-              <IoBagHandleOutline className="bag-icon" />
-            </>
-          )}
-        </div>
         <div className="store">우리집밥상</div>
         <div className="menu-list">
           {products.map(product => (
@@ -115,7 +105,7 @@ function Payment() {
         <input type="text" placeholder="예) 브로콜리 빼주세요" />
       </div>
       <div className="box">
-        <div className="title">결제수단</div>
+        <div className="title-none">결제수단</div>
         <div className="select">
           <div>
             <input type="radio" name="payment" value="credit" />
@@ -132,7 +122,7 @@ function Payment() {
         </div>
       </div>
       <div className="box discount">
-        <div className="title">할인쿠폰</div>
+        <div className="title-none">할인쿠폰</div>
         <div className="coupon-list">
           <div
             className={discount.coupon_number === 1 && discount.select ? 'coupon select' : 'coupon'}
@@ -164,7 +154,7 @@ function Payment() {
         </div>
       </div>
       <div className="box total">
-        <div className="title">결제금액</div>
+        <div className="title-none">결제금액</div>
         <div className="total-price">
           <div className={discount.select ? 'original line' : 'original'}>{toPriceFormat(totalPrice)}</div>
           {discount.select && <div className="discount">{toPriceFormat(getDiscountTotalPrice())}</div>}

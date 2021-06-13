@@ -52,9 +52,8 @@ const Store = styled.div`
   .pin {
     margin-top: -2rem;
     margin-left: -1rem;
-    animation-duration: 3s;
-    padding: 2rem;
-    /* animation: updown; */
+    color: red;
+    font-size: 2rem;
   }
 
   .address {

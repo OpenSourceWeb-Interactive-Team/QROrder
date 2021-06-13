@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { AiOutlineClose } from 'react-icons/ai'
 
 import StyledBasket from './style'
@@ -11,20 +11,18 @@ import { toPriceFormat } from '../../utils/format'
 function Basket() {
   const [totalPrice, setTotalPrice] = useState(0)
   const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
+  const history = useHistory()
 
   useEffect(() => {
     let price = 0
     products.map(product => (price += product.price * product.quantity))
     setTotalPrice(price)
   }, [products])
-
   return (
     <StyledBasket>
       <header>
         <p>주문서</p>
-        <Link to="/menu">
-          <AiOutlineClose className="close-icon" />
-        </Link>
+        <AiOutlineClose className="close-icon" onClick={() => history.goBack()} />
       </header>
       <section>
         <Selector />

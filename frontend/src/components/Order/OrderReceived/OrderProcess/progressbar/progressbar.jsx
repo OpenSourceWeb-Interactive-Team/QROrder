@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { AiOutlineCheckSquare } from 'react-icons/ai'
 import { FiShoppingBag, FiSmile } from 'react-icons/fi'
 
 const ProgressBar = ({ bgcolor, completed, Id }) => {
-  const handleOnClick = index => {
-    Id(index)
-  }
+  const idRef = useRef(-1)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      Id((idRef.current += 1))
+      if (idRef.current === 2) return clearInterval(timer)
+    }, 2000)
+  }, [])
 
   const frame = {
     margin: '0.5em auto',
@@ -59,7 +63,6 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
 
   const icon = {
     color: 'white',
-    margin: '2.8px',
     verticalAlign: 'middle',
   }
 
@@ -70,13 +73,13 @@ const ProgressBar = ({ bgcolor, completed, Id }) => {
           <span style={labelStyles}></span>
         </div>
         <div style={circles}>
-          <div style={circlestyles} id={0} onClick={() => handleOnClick(0)}>
+          <div style={circlestyles} id={0}>
             <FiShoppingBag size={25} style={icon}></FiShoppingBag>
           </div>
-          <div style={circlestyles} id={1} onClick={() => handleOnClick(1)}>
+          <div style={circlestyles} id={1}>
             <AiOutlineCheckSquare size={25} style={icon}></AiOutlineCheckSquare>
           </div>
-          <div style={circlestyles} id={2} onClick={() => handleOnClick(2)}>
+          <div style={circlestyles} id={2}>
             <FiSmile size={25} style={icon}></FiSmile>
           </div>
         </div>

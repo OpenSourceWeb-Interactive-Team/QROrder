@@ -8,10 +8,11 @@ import Chart from './chart'
 import Carousell from './carousel'
 import StyledMenuBoard from './style'
 import BasketButton from './BasketButton'
-import { menuDetails } from '../../__mock__/menu'
+import useStore from '../../hooks/useStore'
 
 function MenuBoard() {
   const [quantity, setQuantity] = useState(0)
+  const store = useStore(1)
   const products = useSelector(state => state.basket.product)
 
   useEffect(() => {
@@ -20,12 +21,16 @@ function MenuBoard() {
     setQuantity(totalQuantity)
   }, [products])
 
+  console.log(store)
+
+  if (!store) return <></>
+
   return (
     <StyledMenuBoard>
       <Store />
       <Carousell />
       <Chart />
-      {menuDetails.map(menuDetail => (
+      {store.menu.map(menuDetail => (
         <Menu key={menuDetail.name} menuDetail={menuDetail}></Menu>
       ))}
       {quantity !== 0 ? (

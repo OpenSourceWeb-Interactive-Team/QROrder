@@ -53,8 +53,6 @@ function OrderProcess() {
       document.getElementById(0).style.backgroundColor = '#F88EF4'
       document.getElementById(1).style.backgroundColor = '#F88EF4'
     }
-    console.log(id)
-    console.log(completed)
   }
 
   return (

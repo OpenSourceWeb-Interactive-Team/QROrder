@@ -33,6 +33,7 @@ const Receipt = styled.div`
     display: flex;
     font-size: 1rem;
     font-weight: 500;
+    padding: 0 0 1em 0;
     .title {
       margin-right: auto;
     }

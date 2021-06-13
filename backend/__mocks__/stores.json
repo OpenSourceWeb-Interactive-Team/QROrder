@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "우리집밥상",
+    "image": "https://mblogthumb-phinf.pstatic.net/MjAxOTA1MjNfMTkw/MDAxNTU4NjIwNjE2MzM0.Wq2etGg068igi4ygiECbhDWtv6Z0iOoGI6DCdO-m1sAg.I2RWxTVOfWW_soHOhEwo0fyDdUspCHx99R6gbHKrW7Ig.JPEG.dellymandyu/SE-8c7bdfd7-d0ac-4ebf-876d-453c57ecd105.jpg?type=w800",
     "phone": "043-263-3999",
     "address": "충청북도 청주시 서원구 사창동 258-4 1층",
     "position": [36.634398969276475, 127.46114835398262],
@@ -63,6 +64,7 @@
   {
     "id": 2,
     "name": "지지고 충북대점",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191218_211%2F157665956648901P0J_JPEG%2Fimage.jpg",
     "phone": "043-277-8581",
     "address": "충청북도 청주시 흥덕구 사창동 405-1",
     "position": [36.63319579151551, 127.45803162417201],
@@ -107,6 +109,7 @@
   {
     "id": 3,
     "name": "은화수식당 충북대점",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210404_174%2F1617542992909e69Xz_JPEG%2Fupload_0937881868e75da113d0beebe13cc1b0.jpeg",
     "phone": "043-268-7266",
     "address": "충청북도 청주시 서원구 사창동 217-15번지 1층",
     "position": [36.63257674139818, 127.45677974176641],
@@ -166,10 +169,11 @@
   {
     "id": 4,
     "name": "샐럽 충북대점",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MTBfMjA0%2FMDAxNjIzMjY0MjQxMDEw.AZ9o8RVdEkhMQFswMKEsgg6QsCxtZudV7BDwMJYBQWgg.chMB0DjN_UsLy6fVucGs5ETmJ3B-JyLSjmvx8piBGKUg.JPEG.gkrckd88%2Foutput_7651542.jpg",
     "phone": "043-272-8277",
     "address": "충청북도 청주시 서원구 KR 사창동 386-9번지 1층 청주시 충청북도 KR",
     "position": [36.6318906499049, 127.4565377079521],
-    "icon": "rice",
+    "icon": "hamburger",
     "star": 4.4,
     "menu": [
       {
@@ -225,10 +229,11 @@
   {
     "id": 5,
     "name": "햇살왕만두",
+    "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNjEyMjlfMjI2%2FMDAxNDgzMDIwMDU5MTYw.yZbliHxhDMEWGfnekku07VSJQSFHPyFw_SEaFa_pQ6Eg.REOqAJH5GaDxCJP3x-nCKwuFAUSzGOsYZOfASg1E-tEg.JPEG.vartovr%2FKakaoTalk_20161229_135206251.jpg&type=sc960_832",
     "phone": "043-264-7050",
     "address": "충청북도 청주시 흥덕구 복대2동 사직대로82번길 14",
     "position": [36.63396556813718, 127.45606563919762],
-    "icon": "rice",
+    "icon": "fish",
     "star": 4.8,
     "menu": [
       {
@@ -258,12 +263,13 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "바른치킨충북대점",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MDVfMjMx%2FMDAxNjIwMjAzMzAzMjUw.LfqKLIVxgazoizBhEdk1Xh1z8nUooPY7xd-N8TGTbMcg.xnbgH5x7TK02j18JIeTYqhb99KGiMunm8MJ-xgfGJh0g.JPEG.sjrkchlrhek%2F20210430_225134.jpg",
     "phone": "043-263-5841",
     "address": "충청북도 청주시 서원구 사창동 150-24",
     "position": [36.63375893978952, 127.45719216685747],
-    "icon": "chicken",
+    "icon": "hamburger",
     "star": 4.1,
     "menu": [
       {
@@ -309,8 +315,9 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "모퉁이 파스타",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjBfMTY3%2FMDAxNjEzNzkzMTg5MjQ2.KKJ6qXVc2_srM8ZxU2iYohFu30BmBauOo531iLmgYbEg.Cc7PLEnII9eiwQ9wKYUukCNi4_tHAagWhDjYbACRCmcg.JPEG.dusgmlblog%2FIMG_1188.jpg",
     "phone": "043-266-8648",
     "address": "충청북도 청주시 흥덕구 사창동 507",
     "position": [36.6317857443674, 127.46012754377054],
@@ -360,8 +367,9 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "파브리카",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA4MzFfMzEg%2FMDAxNTY3MjU0OTM0MjU5.Zh0AP4JRuqq9gYkQqq8hcdAoRIPoIBcZ51yiraHJkfIg.3_0aAuROI6c5s1NtBGiwL-0oTS6UWmW3VdwT2AICH6Mg.JPEG.yurifive%2FIMG_3756.jpg",
     "phone": "0507-1405-8068",
     "address": "충북 청주시 서원구 1순환로 682 메가박스 충북대점 2층",
     "position": [36.6326920247714, 127.46050992104652],
@@ -411,12 +419,13 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "왕천파닭 충대점",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MDRfMTEz%2FMDAxNjIyODA2ODU3NTI5.DA0y431X3SjFztmR7_mOk5wrDmiCuK7-u4e6IZEC6e8g.Kl5TyJztbudeOCJK6dR1JWH4-RVDtSsO4nzQkfw5jagg.JPEG.teng9u%2FIMG_1616.jpg",
     "phone": "043-263-4088",
     "address": "충청북도 청주시 흥덕구 사창동 155-6",
     "position": [36.6341192163963, 127.45918493932272],
-    "icon": "chicken",
+    "icon": "fish",
     "star": 4.6,
     "menu": [
       {
@@ -462,8 +471,9 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "중문탕수육",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMTNfNTIg%2FMDAxNTc2MjA4NTE1MDE1.rw5nwVTKZJcAF2v4MQOHXvwok1kVlnfBcKLB7Yk3F6og.Cq701ptxiULEJhGZ2foXiE0I3GjFQnKJnkdaafvqrdwg.JPEG.kangsr4769%2F20191121_194152.jpg",
     "phone": "043-266-4098",
     "address": "충북 청주시 서원구 1순환로674번길 72",
     "position": [36.63191413632094, 127.45706363594097],
@@ -521,8 +531,9 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "북경깐풍기",
+    "image": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210502_32%2F1619948319711ue1fj_JPEG%2Fupload_140d6bfbc1b3253cc286095a4e66a81c.jpg",
     "phone": "0507-1381-0161",
     "address": "충북 청주시 서원구 내수동로108번길 40 1층",
     "position": [36.632620606613315, 127.45796177787972],
@@ -579,5 +590,4 @@
       }
     ]
   }
-
 ]

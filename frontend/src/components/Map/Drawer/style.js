@@ -35,13 +35,15 @@ const Drawer = styled.div`
     }
     .address {
       margin-top: 0.7rem;
-      overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       width: 250px;
     }
     .menu {
       margin-top: 0.3rem;
+      p {
+        margin-bottom: 0.3rem;
+      }
     }
   }
 `

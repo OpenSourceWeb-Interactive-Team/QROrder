@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import Menu from './Menu'
 import Store from './Store'
@@ -12,7 +12,8 @@ import useStore from '../../hooks/useStore'
 
 function MenuBoard() {
   const [quantity, setQuantity] = useState(0)
-  const store = useStore(1)
+  const { storeId } = useParams('storeId')
+  const store = useStore(storeId)
   const products = useSelector(state => state.basket.product)
 
   useEffect(() => {
@@ -21,13 +22,11 @@ function MenuBoard() {
     setQuantity(totalQuantity)
   }, [products])
 
-  console.log(store)
-
   if (!store) return <></>
 
   return (
     <StyledMenuBoard>
-      <Store />
+      <Store store={store}/>
       <Carousell />
       <Chart />
       {store.menu.map(menuDetail => (

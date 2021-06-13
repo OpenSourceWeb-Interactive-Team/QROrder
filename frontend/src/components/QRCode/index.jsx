@@ -14,7 +14,7 @@ function QRCode() {
           02-452-1424
         </div>
         <div className="qrcode">
-          <ReactQRCode value="http://localhost:3000"></ReactQRCode>
+          <ReactQRCode value="http://qrorder.jaryapp.kro.kr/menu/1"></ReactQRCode>
         </div>
         <div className="desc">
           <p className="info">{`< QROrder 사용방법 >`}</p>

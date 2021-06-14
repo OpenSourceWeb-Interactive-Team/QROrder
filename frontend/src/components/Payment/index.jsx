@@ -39,6 +39,8 @@ function Payment() {
   })
   const [totalPrice, setTotalPrice] = useState(0)
   const products = useSelector(state => state.basket.product.filter(product => product.quantity > 0))
+  const store = useSelector(state => state.basket.store)
+
   const dispatch = useDispatch()
   useEffect(() => {
     let price = 0
@@ -86,7 +88,7 @@ function Payment() {
       </header>
       <div className="box order">
         <div className="title">주문 정보</div>
-        <div className="store">우리집밥상</div>
+        <div className="store">{store.name}</div>
         <div className="menu-list">
           {products.map(product => (
             <div className="menu" key={product.name}>

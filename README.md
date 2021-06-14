@@ -4,6 +4,9 @@
 
 충북대학교 맛집 QRCode 주문 시스템
 
+[데모사이트](http://qrorder.jaryapp.kro.kr/)
+
+
 ## ✋ Team Members
 * ![조정제](https://img.shields.io/badge/충북대학교_소프트웨어학과-조정제-blue)
 

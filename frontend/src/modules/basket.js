@@ -1,6 +1,7 @@
 import produce from 'immer'
 
 const SET_MEANS = 'basket/MEANS'
+const SET_STORE = 'basket/STORE'
 const PLUS = 'basket/PLUS'
 const MINUS = 'basket/MINUS'
 const GET_INIT_PRODUCT = 'basket/GET_INIT_PRODUCT'
@@ -8,6 +9,11 @@ const DISCOUNT = 'basket/DISCOUNT'
 
 export const setMeans = () => ({
   type: SET_MEANS,
+})
+
+export const setStore = store => ({
+  type: SET_STORE,
+  payload: store,
 })
 
 export const plus = ({ name }) => ({
@@ -31,6 +37,7 @@ export const discountCash = ({ type, amount }) => ({
 })
 
 const initialState = {
+  store: {},
   means: true,
   product: [],
   discount: { type: 'money', amount: 0 },
@@ -38,6 +45,11 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
+    case SET_STORE:
+      return {
+        ...state,
+        store: action.payload,
+      }
     case SET_MEANS:
       return {
         ...state,

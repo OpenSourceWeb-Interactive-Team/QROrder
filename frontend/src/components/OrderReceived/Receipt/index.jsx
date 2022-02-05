@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import StyledReceipt from './style'
 import MenuInfo from './menu_info/index'
-import { toPriceFormat } from '../../../../utils/format'
+import { toPriceFormat } from '../../../utils/format'
 
 export default function Receipt() {
   var num = 0

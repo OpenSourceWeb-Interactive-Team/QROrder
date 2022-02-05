@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import StyledOrderReceived from './style'
-import DotButton from '../dotbutton'
+import DotButton from './dotbutton'
 import OrderProcess from './OrderProcess/index'
 import OrderInfo from './OrderInfo/index'
 import Receipt from './Receipt/index'

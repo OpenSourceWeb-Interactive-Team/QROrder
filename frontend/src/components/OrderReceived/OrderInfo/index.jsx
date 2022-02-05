@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import StyledOrderInfo from './style'
-import { toPriceFormat } from '../../../../utils/format'
+import { toPriceFormat } from '../../../utils/format'
 import moment from 'moment'
 
 export default function OrderInfo() {

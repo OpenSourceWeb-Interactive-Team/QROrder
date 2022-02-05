@@ -1,6 +1,6 @@
 import StyledMenuInfo from './style'
 import { FiCornerDownRight } from 'react-icons/fi'
-import { toPriceFormat } from '../../../../../utils/format'
+import { toPriceFormat } from '../../../../utils/format'
 
 export default function MenuInfo({ product }) {
   const { name, price, quantity } = product

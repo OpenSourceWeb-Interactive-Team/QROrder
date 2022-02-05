@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import StyledOrderProcess from './style'
 import { AiOutlineCheckSquare } from 'react-icons/ai'
 import { FiShoppingBag, FiSmile } from 'react-icons/fi'
-import { setProcess } from '../../../../modules/process'
+import { setProcess } from '../../../modules/process'
 
 function OrderProcess() {
   const idRef = useRef(0)
